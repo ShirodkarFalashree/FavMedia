@@ -1,8 +1,78 @@
 import React from 'react'
+import { FaCheckCircle, FaGithub, FaWhatsapp, FaInstagram, FaTwitter } from 'react-icons/fa'
+
+const TaskCard = ({ icon, text }) => (
+  <div className="flex items-center gap-3 bg-black/80 text-white px-4 py-2 rounded-lg shadow-md backdrop-blur-md w-full">
+    <span className="text-xl">{icon}</span>
+    <span className="text-sm font-medium max-w-[200px]">{text}</span>
+  </div>
+)
 
 const Testimonials = () => {
+  const testimonials = [
+    { icon: <FaWhatsapp />, text: "Absolutely loved the speed and quality. Would recommend to anyone!" },
+    { icon: <FaInstagram />, text: "Our brand’s Insta feed has never looked better. Stellar design!" },
+    { icon: <FaGithub />, text: "The UI designs fit our dev stack perfectly. Great job!" },
+    { icon: <FaTwitter />, text: "Quick turnaround and creative results. You earned a follower!" },
+    { icon: <FaInstagram />, text: "Perfect aesthetics for social media. Will work again!" },
+  ]
+
+  const repeatedTestimonials = [...testimonials, ...testimonials]
+
   return (
-    <div>Testimonials</div>
+    <div className="flex flex-col lg:flex-row justify-around items-center px-8 py-16 bg-black text-white">
+      {/* Left Glowing Card with Scroll Animation */}
+      <div
+        className="relative w-full max-w-md h-[400px] rounded-3xl overflow-hidden"
+        style={{
+          background: 'radial-gradient(circle at bottom, #A9A9A9 0%, #000 100%)',
+        }}
+      >
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="flex flex-col gap-4 animate-scrollUp ">
+            {repeatedTestimonials.map((t, idx) => (
+              <div
+                key={idx}
+                className={`transform ${
+                  idx % 3 === 0
+                    ? 'rotate-1'
+                    : idx % 3 === 1
+                    ? '-rotate-2'
+                    : 'rotate-2'
+                } transition duration-300`}
+              >
+                <TaskCard icon={t.icon} text={t.text} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none"></div>
+      </div>
+
+      {/* Right Content */}
+      <div className="max-w-lg mt-10 lg:mt-0">
+        <h2 className="text-3xl font-bold mb-4">
+          What our <span className="text-subtext">clients</span><span className="text-white"> say.</span>
+        </h2>
+        <p className="text-gray-400 mb-8 leading-relaxed">
+          Real feedback from businesses and creators who’ve experienced the power of great design.
+        </p>
+        <ul className="space-y-4">
+          <li className="flex items-center gap-2">
+            <FaCheckCircle className="text-white" />
+            <span>100% real feedback</span>
+          </li>
+          <li className="flex items-center gap-2">
+            <FaCheckCircle className="text-white" />
+            <span>Verified clients from top platforms</span>
+          </li>
+          <li className="flex items-center gap-2">
+            <FaCheckCircle className="text-white" />
+            <span>Always improving from your words</span>
+          </li>
+        </ul>
+      </div>
+    </div>
   )
 }
 
