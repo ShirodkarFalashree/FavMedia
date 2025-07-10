@@ -9,6 +9,8 @@ import Contact from '../sections/Contact'
 import CompaniesStrip from '../components/CompaniesStrip'
 import { Fa0 } from 'react-icons/fa6'
 import Faq from '../sections/Faq'
+import ProcessSection2 from '../sections/ProcessSection2'
+import ProcessSection3 from '../sections/ProcessSection3'
 
 const Home = () => {
   return (
@@ -19,7 +21,10 @@ const Home = () => {
           <Services/>
 
 </div>
-        {/* <ProcessSection/> */}
+        <ProcessSection/>
+        
+        <ProcessSection2/>
+        <ProcessSection3/>
         <Pricing/>
         <BookACall/>
         <Testimonials/>

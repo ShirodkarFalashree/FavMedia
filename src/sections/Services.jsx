@@ -4,7 +4,7 @@ import { IoFlashOutline } from 'react-icons/io5'
 
 const Services = () => {
   return (
-    <div className='w-full flex flex-col justify-center items-center mb-[80px] md:mb-[180px] px-8 md:px-10'>
+    <div className='w-full flex flex-col justify-center items-center mb-[80px] md:mb-[80px] px-8 md:px-10'>
       {/* Services tag */}
       <div className="p-[1px] rounded-full bg-gradient-to-r from-white to-black mb-6 md:mb-10">
         <div className="flex items-center justify-center text-xs sm:text-sm bg-white dark:bg-black p-1 rounded-full gap-2">
