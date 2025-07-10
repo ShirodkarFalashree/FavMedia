@@ -1,6 +1,8 @@
 import React from 'react';
 import { GoDotFill } from 'react-icons/go';
-import { FaCheck } from 'react-icons/fa';
+import { FaCheck, FaBuilding } from 'react-icons/fa';
+import { HiBriefcase } from 'react-icons/hi';
+import { BsRocket } from 'react-icons/bs';
 
 const plans = [
   {
@@ -18,8 +20,8 @@ const plans = [
     ],
     hasGuarantee: false,
     badge: 'Most Pick',
-    icon: '✈️',
-  },
+    icon: <BsRocket className="text-3xl text-gray-500" />,
+  },  
   {
     name: 'Professional',
     price: '$599',
@@ -35,7 +37,7 @@ const plans = [
     ],
     hasGuarantee: false,
     badge: 'Advanced',
-    icon: '👜',
+    icon: <HiBriefcase className="text-3xl text-gray-500" />,
   },
   {
     name: 'Enterprise',
@@ -52,7 +54,7 @@ const plans = [
     ],
     hasGuarantee: true,
     badge: 'Recommended',
-    icon: '🖥️',
+    icon: <FaBuilding className="text-3xl text-gray-500" />,
   },
 ];
 
@@ -84,58 +86,61 @@ const Pricing = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl">
         {plans.map((plan, index) => (
           <div
-            key={index}
-            className="relative p-6 bg-[#111] rounded-3xl border border-[#2a2a2a] flex flex-col gap-4 shadow-xl"
-          >
-            {/* Badge */}
-            <div className="absolute top-4 right-4 px-3 py-1 text-xs bg-[#1f1f1f] border border-[#333] rounded-full text-gray-300">
-              {plan.badge}
-            </div>
+  key={index}
+  className="relative p-6 bg-[#111] rounded-3xl border border-[#2a2a2a] flex flex-col shadow-xl min-h-[600px]"
+>
+  {/* Badge */}
+  <div className="absolute top-4 right-4 px-3 py-1 text-xs bg-[#1f1f1f] border border-[#333] rounded-full text-gray-300">
+    {plan.badge}
+  </div>
 
-            {/* Icon */}
-            <div className="text-3xl">{plan.icon}</div>
+  {/* Icon */}
+  <div className="text-3xl mb-2">{plan.icon}</div>
 
-            {/* Title & Price */}
-            <h3 className="text-xl font-semibold">{plan.name}</h3>
-            <p className="text-3xl font-bold">
-              {plan.price}
-              <span className="text-base font-medium text-gray-400">{plan.period}</span>
-            </p>
+  {/* Main Content */}
+  <div className="flex-grow flex flex-col gap-4">
+    <h3 className="text-xl font-semibold">{plan.name}</h3>
+    <p className="text-3xl font-bold">
+      {plan.price}
+      <span className="text-base font-medium text-gray-400">{plan.period}</span>
+    </p>
+    <p className="text-subtext">{plan.description}</p>
 
-            {/* Description */}
-            <p className="text-subtext">{plan.description}</p>
+    {/* Projects & Revisions */}
+    <div className="flex items-center gap-4 text-sm text-white/80">
+      <span className="bg-white/10 px-3 py-1 rounded-full">{plan.projects}</span>
+      <span className="bg-white/10 px-3 py-1 rounded-full">{plan.revisions}</span>
+    </div>
 
-            {/* Projects & Revisions */}
-            <div className="flex items-center gap-4 text-sm text-white/80">
-              <span className="bg-white/10 px-3 py-1 rounded-full">{plan.projects}</span>
-              <span className="bg-white/10 px-3 py-1 rounded-full">{plan.revisions}</span>
-            </div>
+    {/* Features */}
+    <ul className="flex flex-col gap-2 mt-4 text-sm">
+      {plan.features.map((feature, i) => (
+        <li key={i} className="flex items-center gap-2 text-gray-300">
+          <FaCheck className="text-gray-500" />
+          {feature}
+        </li>
+      ))}
+      <li className="flex items-center gap-2 text-gray-500 line-through">
+        <FaCheck className="text-gray-500" />
+        30-Days Money-back Guarantee
+      </li>
+      {plan.hasGuarantee && (
+        <li className="flex items-center gap-2 text-gray-300">
+          <FaCheck className="text-gray-500" />
+          30-Days Money-back Guarantee
+        </li>
+      )}
+    </ul>
+  </div>
 
-            {/* Features */}
-            <ul className="flex flex-col gap-2 mt-4 text-sm">
-              {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-center gap-2 text-gray-300">
-                  <FaCheck className="text-purple-500" />
-                  {feature}
-                </li>
-              ))}
-              <li className="flex items-center gap-2 text-gray-500 line-through">
-                <FaCheck className="text-purple-500" />
-                30-Days Money-back Guarantee
-              </li>
-              {plan.hasGuarantee && (
-                <li className="flex items-center gap-2 text-gray-300">
-                  <FaCheck className="text-purple-500" />
-                  30-Days Money-back Guarantee
-                </li>
-              )}
-            </ul>
+  {/* Button - Always at Bottom */}
+  <div className="mt-6 p-[2px] rounded-xl bg-[linear-gradient(143deg,_rgba(194,194,194,1)_0%,_black_50%,_rgba(194,194,194,1)_100%,_black_100%)]">
+    <button className="px-6 py-3 bg-black text-white rounded-xl w-full h-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+      Book A Free Call Now
+    </button>
+  </div>
+</div>
 
-            {/* CTA Button */}
-            <button className="mt-6 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 transition-all text-sm py-3 rounded-xl font-medium">
-              Book an Appointment
-            </button>
-          </div>
         ))}
       </div>
     </section>

@@ -15,9 +15,9 @@ const Home = () => {
         <CompaniesStrip />
 
         <Services/>
-        <ProcessSection/>
+        {/* <ProcessSection/> */}
         <Pricing/>
-        <BookACall/>
+        {/* <BookACall/> */}
         <Testimonials/>
         <Contact/>
     </div>
