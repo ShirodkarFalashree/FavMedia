@@ -7,10 +7,12 @@ import Blogs from './pages/Blogs';
 import Templates from './pages/Templates';
 import Contact from './pages/Contact';
 import ChatBotWidget from './components/ChatBotWidget ';
+import CursorTrail from './components/CursorTrail';
 
 const Layout = () => {
   return (
     <div className='font-inter bg-mainbg min-h-screen text-white'>
+      <CursorTrail/>
       <Navbar />
       <Outlet />
       <ChatBotWidget/>
