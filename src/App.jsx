@@ -9,11 +9,11 @@ import Contact from './pages/Contact';
 
 const Layout = () => {
   return (
-    <>
+    <div className='font-inter bg-mainbg min-h-screen text-white'>
       <Navbar />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 
