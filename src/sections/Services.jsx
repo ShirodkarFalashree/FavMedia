@@ -16,21 +16,21 @@ const Services = () => {
       </div>
 
       {/* Heading section */}
-      <div className='text-center flex flex-col gap-4 md:gap-6 items-center justify-center mb-6 md:mb-10'>
+      <div className='text-center flex flex-col gap-4 md:gap-6 items-center justify-center mb-6 md:mb-6'>
         <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-[54px] leading-[1.2] md:leading-[50px]'>
           What We Provide
         </h2>
-        <p className='text-subtext w-full sm:max-w-md md:w-[540px] text-sm sm:text-[16px] leading-[1.6] md:leading-[26px]'>
+        <p className='text-subtext w-full sm:max-w-[600px] md:w-full text-sm sm:text-[16px] leading-[1.6] md:leading-[26px]'>
           FavMedia gives you flexible solutions to launch your website — whether you need a quick template, custom tweaks, or a fully unique design.
         </p>
       </div>
 
       {/* Get Started button */}
-      <div className="p-[2px] mb-10 md:mb-20 rounded-xl bg-gradient-to-r from-gray-200 via-black to-gray-200 w-full sm:w-auto">
+      {/* <div className="p-[2px] mb-10 md:mb-10 rounded-xl bg-gradient-to-r from-gray-200 via-black to-gray-200 w-full sm:w-auto">
         <button className="px-4 py-3 sm:px-6 sm:py-3 bg-black text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-sm sm:text-base">
           Get Started
         </button>
-      </div>
+      </div> */}
 
       {/* Services cards */}
       <div className='w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12'>

@@ -6,11 +6,14 @@ import Pricing from '../sections/Pricing'
 import BookACall from '../sections/BookACall'
 import Testimonials from '../sections/Testimonials'
 import Contact from '../sections/Contact'
+import CompaniesStrip from '../components/CompaniesStrip'
 
 const Home = () => {
   return (
     <div>
         <Hero/>
+        <CompaniesStrip />
+
         <Services/>
         <ProcessSection/>
         <Pricing/>
