@@ -37,7 +37,7 @@ const CursorTrail = () => {
   return (
     <div
       ref={circleRef}
-      className="fixed top-0 left-0 w-5 h-5 bg-white border border-white/20 rounded-full pointer-events-none z-[9999]"
+      className="hidden md:block fixed top-0 left-0 w-5 h-5 bg-white border border-white/20 rounded-full pointer-events-none z-[9999]"
       style={{
         filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.6))',
         mixBlendMode: 'difference',
