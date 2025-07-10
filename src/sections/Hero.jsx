@@ -3,7 +3,7 @@ import { GoDotFill } from "react-icons/go";
 
 const Hero = () => {
   return (
-    <div className="bg-black text-white md:min-h-[300px]  flex flex-col justify-center items-center py-10 md:py-0 gap-0 md:gap-2 px-4 sm:px-6 lg:px-8 md:mt-[60px] mb-10">
+    <div className="bg-black text-white md:min-h-[300px]  flex flex-col justify-center items-center py-10 md:py-0 gap-0 md:gap-2 px-4 sm:px-6 lg:px-8 md:pt-[150px] mb-10">
       {/* Animated tagline */}
       <div className="p-[1px] rounded-full bg-gradient-to-r from-white to-black mb-6 md:mb-6">
         <div className="flex items-center justify-center bg-white dark:bg-black p-2 rounded-full gap-2 text-xs sm:text-sm">

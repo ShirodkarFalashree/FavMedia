@@ -6,12 +6,14 @@ import About from './pages/About';
 import Blogs from './pages/Blogs';
 import Templates from './pages/Templates';
 import Contact from './pages/Contact';
+import ChatBotWidget from './components/ChatBotWidget ';
 
 const Layout = () => {
   return (
     <div className='font-inter bg-mainbg min-h-screen text-white'>
       <Navbar />
       <Outlet />
+      <ChatBotWidget/>
       <Footer />
     </div>
   );

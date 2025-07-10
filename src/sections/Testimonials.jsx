@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaCheckCircle, FaGithub, FaWhatsapp, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { GoDotFill } from "react-icons/go";
 
 const TaskCard = ({ icon, text }) => (
   <div className="flex items-center gap-3 bg-black/80 text-white px-4 py-2 rounded-lg shadow-md backdrop-blur-md w-full">
@@ -50,9 +51,15 @@ const Testimonials = () => {
       </div>
 
       {/* Right Content */}
-      <div className="w-full max-w-md lg:max-w-lg mt-0 lg:mt-0 px-2 sm:px-0">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-          What our <span className="text-subtext">clients</span><span className="text-white"> say.</span>
+<div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
+  <div className="p-[1px] rounded-full bg-gradient-to-r from-white to-transparent mb-4 w-fit">
+              <div className="flex items-center justify-center bg-black p-2 rounded-full gap-2">
+                <GoDotFill className="animate-[blink_1s_infinite] text-white" />
+                <p className="text-sm">Testimonials</p>
+              </div>
+            </div>
+          <h2 className="text-3xl sm:text-5xl font-semibold mb-4 ">
+          What our clients say
         </h2>
         <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
           Real feedback from businesses and creators who've experienced the power of great design.
