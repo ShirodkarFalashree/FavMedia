@@ -7,8 +7,8 @@ const Hero = () => {
       <div className="p-[1px] rounded-full bg-gradient-to-r from-white to-black">
         <div className="flex items-center justify-center bg-white dark:bg-black p-2 rounded-full gap-2">
           <span className="animate-[blink_1s_infinite] ">
-  <GoDotFill />
-</span>
+            <GoDotFill />
+          </span>
 
           <p>Crafting Unique Brand Identities</p>{" "}
         </div>
