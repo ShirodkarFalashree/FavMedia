@@ -21,11 +21,15 @@
   @keyframes blink {
     0%, 100% {
       opacity: 1;
+      filter: drop-shadow(0 0 4px rgba(180, 180, 180, 2.5));
     }
     50% {
       opacity: 0.5;
+      filter: none;
     }
   }
+
+
 
   .animate-blink {
     animation: blink 1s infinite;

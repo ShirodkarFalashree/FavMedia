@@ -7,18 +7,23 @@ import BookACall from '../sections/BookACall'
 import Testimonials from '../sections/Testimonials'
 import Contact from '../sections/Contact'
 import CompaniesStrip from '../components/CompaniesStrip'
+import { Fa0 } from 'react-icons/fa6'
+import Faq from '../sections/Faq'
 
 const Home = () => {
   return (
     <div>
         <Hero/>
         <CompaniesStrip />
+<div id='services'>
+          <Services/>
 
-        <Services/>
+</div>
         {/* <ProcessSection/> */}
         <Pricing/>
-        {/* <BookACall/> */}
+        <BookACall/>
         <Testimonials/>
+        <Faq/>
         <Contact/>
     </div>
   )

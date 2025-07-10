@@ -14,7 +14,7 @@ const Contact = () => {
             <p>Work with us</p>{" "}
           </div>
         </div>
-        <h1 className="text-[52px] md:w-[840px]  text-center leading-14">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[92px]  leading-tight md:leading-[92px] text-center max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-[840px]">
           Ready to Elevate Your Brand with Next-Gen Innovation?
         </h1>
         <p className="text-center md:w-[640px] text-subtext">

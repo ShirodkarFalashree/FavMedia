@@ -25,7 +25,7 @@ const Testimonials = () => {
       <div
         className="relative w-full max-w-sm sm:max-w-md h-[300px] sm:h-[350px] md:h-[400px] rounded-2xl md:rounded-3xl overflow-hidden mb-8 lg:mb-0"
         style={{
-          background: 'radial-gradient(circle at bottom, #A9A9A9 0%, #000 100%)',
+          background: 'radial-gradient(circle at bottom, #5C5B5B 0%, #000 100%)',
         }}
       >
         <div className="absolute inset-0 overflow-hidden">
