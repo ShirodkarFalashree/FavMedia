@@ -1,18 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
+/* Theme custom properties */
 @theme {
   /* Colors */
-
   --color-mainbg: #000;
-  --color-maintext:#fff;
-  --color-subtext:#A9A9A9;
-  
+  --color-maintext: #fff;
+  --color-subtext: #A9A9A9;
+
   /* Fonts */
   --font-inter: 'Inter', sans-serif;
   --font-sans: 'DM Sans', serif;
 }
 
 @layer components {
-  
+  /* You can add custom component classes here if needed */
+}
+
+@layer utilities {
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 1s infinite;
+  }
 }
