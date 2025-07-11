@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   FaUserAlt,
   FaBriefcase,
@@ -20,9 +20,8 @@ import {
   FaStar,
   FaListUl,
   FaHourglassHalf,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
-// ✅ ICON MAP
 const icons = {
   FaUserAlt,
   FaBriefcase,
@@ -46,65 +45,55 @@ const icons = {
   FaHourglassHalf,
 };
 
-// ✅ WEBSITE TYPES
 const companies = [
-  { title: "Portfolio Website", icon: "FaUserAlt" },
-  { title: "Business Website", icon: "FaBriefcase" },
-  { title: "E-commerce Website", icon: "FaShoppingCart" },
-  { title: "Blog or Personal Website", icon: "FaPenNib" },
-  { title: "Landing Page", icon: "FaRocket" },
-  { title: "Agency Website", icon: "FaBuilding" },
-  { title: "Corporate Website", icon: "FaSitemap" },
-  { title: "Non-Profit & Charity Website", icon: "FaHandHoldingHeart" },
-  { title: "Event Website", icon: "FaCalendarAlt" },
-  { title: "Educational Website", icon: "FaGraduationCap" },
-  { title: "Membership Website", icon: "FaUsers" },
-  { title: "Community or Forum Website", icon: "FaComments" },
-  { title: "Booking Website", icon: "FaCalendarCheck" },
-  { title: "Restaurant & Cafe Website", icon: "FaUtensils" },
-  { title: "Real Estate Website", icon: "FaHome" },
-  { title: "News & Magazine Website", icon: "FaNewspaper" },
-  { title: "SaaS / Product Website", icon: "FaCode" },
-  { title: "Personal Brand Website", icon: "FaStar" },
-  { title: "Directory & Listing Website", icon: "FaListUl" },
-  { title: "Coming Soon Page", icon: "FaHourglassHalf" },
+  { title: 'Portfolio Website', icon: 'FaUserAlt' },
+  { title: 'Business Website', icon: 'FaBriefcase' },
+  { title: 'E-commerce Website', icon: 'FaShoppingCart' },
+  { title: 'Blog or Personal Website', icon: 'FaPenNib' },
+  { title: 'Landing Page', icon: 'FaRocket' },
+  { title: 'Agency Website', icon: 'FaBuilding' },
+  { title: 'Corporate Website', icon: 'FaSitemap' },
+  { title: 'Non-Profit & Charity Website', icon: 'FaHandHoldingHeart' },
+  { title: 'Event Website', icon: 'FaCalendarAlt' },
+  { title: 'Educational Website', icon: 'FaGraduationCap' },
+  { title: 'Membership Website', icon: 'FaUsers' },
+  { title: 'Community or Forum Website', icon: 'FaComments' },
+  { title: 'Booking Website', icon: 'FaCalendarCheck' },
+  { title: 'Restaurant & Cafe Website', icon: 'FaUtensils' },
+  { title: 'Real Estate Website', icon: 'FaHome' },
+  { title: 'News & Magazine Website', icon: 'FaNewspaper' },
+  { title: 'SaaS / Product Website', icon: 'FaCode' },
+  { title: 'Personal Brand Website', icon: 'FaStar' },
+  { title: 'Directory & Listing Website', icon: 'FaListUl' },
+  { title: 'Coming Soon Page', icon: 'FaHourglassHalf' },
 ];
 
-const CompaniesStrip2 = () => {
+const CompaniesStrip2 = ({ duration = 20 }) => {
   const duplicatedCompanies = [...companies, ...companies];
+  const animationClass = `scroll-speed-${duration}`;
+
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes scroll-left-${duration} {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+      }
+      .${animationClass} {
+        animation: scroll-left-${duration} ${duration}s linear infinite;
+      }
+    `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, [duration]);
 
   return (
-    <div className="bg-transparent flex items-center justify-center px-4 font-sans relative">
+    <div className="bg-transparent flex items-center justify-center font-sans relative">
       <style>
         {`
-          @keyframes scroll-right {
-            0% {
-              transform: translateX(0%);
-            }
-            100% {
-              transform: translateX(50%);
-            }
-          }
-
-          .animate-scroll {
-            animation: scroll-right 40s linear infinite;
-          }
-
           .gradient-mask {
-            mask-image: linear-gradient(
-              to right, 
-              transparent 0%, 
-              black 10%, 
-              black 90%, 
-              transparent 100%
-            );
-            -webkit-mask-image: linear-gradient(
-              to right, 
-              transparent 0%, 
-              black 10%, 
-              black 90%, 
-              transparent 100%
-            );
+            mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
           }
 
           .blur-edges::before,
@@ -132,22 +121,10 @@ const CompaniesStrip2 = () => {
 
           @media (max-width: 768px) {
             .gradient-mask {
-              mask-image: linear-gradient(
-                to right, 
-                transparent 0%, 
-                black 5%, 
-                black 95%, 
-                transparent 100%
-              );
-              -webkit-mask-image: linear-gradient(
-                to right, 
-                transparent 0%, 
-                black 5%, 
-                black 95%, 
-                transparent 100%
-              );
+              mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+              -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
             }
-            
+
             .blur-edges::before,
             .blur-edges::after {
               width: 50px;
@@ -157,9 +134,9 @@ const CompaniesStrip2 = () => {
         `}
       </style>
 
-      <div className="w-full  relative overflow-hidden py-8 blur-edges">
+      <div className="w-full relative overflow-hidden py-4 blur-edges">
         <div className="gradient-mask">
-          <div className="flex animate-scroll whitespace-nowrap">
+          <div className={`flex whitespace-nowrap ${animationClass}`}>
             {duplicatedCompanies.map((company, index) => {
               const IconComponent = icons[company.icon];
               return (
@@ -168,10 +145,8 @@ const CompaniesStrip2 = () => {
                   className="flex-shrink-0 mx-4 px-4 py-2 bg-[#0D0D0D] rounded-3xl shadow-lg flex items-center justify-center gap-2 text-white"
                   style={{ minWidth: '180px' }}
                 >
-                  <div className="">
-                    {IconComponent && <IconComponent size={16} />}
-                  </div>
-                  <div className="text-subtext">{company.title}</div>
+                  {IconComponent && <IconComponent size={16} />}
+                  <span className="text-subtext">{company.title}</span>
                 </div>
               );
             })}

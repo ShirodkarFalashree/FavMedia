@@ -1,31 +1,36 @@
 import React from "react";
-import img from "../assets/process1.avif"
+import img from "../assets/process1.avif";
+import CompaniesStrip2 from "../components/CompaniesStrip2";
+
 const founders = [
   {
     name: "Falashree Shirodkar",
     role: "Co-founder, FAVMedia",
     image:
       "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-    bio: `Falashree is the co-founder of FAVMedia — a modern agency focused on website development, video editing, and digital strategy. As a Computer Engineering student and full-stack developer, she has worked with startups and businesses across industries, building sleek, performance-driven solutions. Alongside leading the team, she manages client relations and product delivery, and also actively creates content around tech and design.`,
-    highlights: [
-      "Full-Stack Web Developer (MERN, .NET)",
-      "Freelancer turned agency owner",
-      "Internship at Eduswitch Solutions",
-      "Loves painting, badminton, and building brands",
-    ],
+    bio: `Falashree is the co-founder of FAVMedia — a modern agency focused on website development, video editing, and digital strategy. As a Computer Engineering student and full-stack developer, she has worked with startups and businesses across industries, building sleek, performance-driven solutions.`,
   },
   {
     name: "Avishkar Kakade",
     role: "Co-founder, FAVMedia",
     image:
       "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-    bio: `Avishkar is the driving force behind operations and creative direction at FAVMedia. With strong leadership and a deep passion for digital business, he leads strategy, marketing, and content creation. Avishkar brings structure and vision into projects, ensuring that every client receives not just a service — but a business transformation.`,
-    highlights: [
-      "Creative Strategist & Business Lead",
-      "Expert in lead generation & client communication",
-      "Co-leader of “The Dolphins” Hackathon Team",
-      "Focused on growth, branding, and impact",
-    ],
+    bio: `Avishkar is the driving force behind operations and creative direction at FAVMedia. With strong leadership and a deep passion for digital business, he leads strategy, marketing, and content creation.`,
+  },
+];
+
+const stats = [
+  {
+    title: "+15 Clients",
+    description: "Worked with creators, startups & brands across industries",
+  },
+  {
+    title: "+30 Templates Sold",
+    description: "Modern website & design templates crafted with purpose",
+  },
+  {
+    title: "And Growing...",
+    description: "New collaborations, projects, and opportunities every week",
   },
 ];
 
@@ -33,87 +38,119 @@ const About = () => {
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       {/* Hero Section */}
-      <section className="py-24 px-6 md:px-12 max-w-6xl mx-auto text-center relative">
-        <div className="text-center px-6 py-16 md:py-24">
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-white space-y-4">
-            <div>WE ARE AT THE HEART OF DIGITAL INNOVATION!</div>
-            <div>HELPING BRANDS STAND OUT WITH DESIGN, STRATEGY, AND CODE.</div>
-            <div>BUILDING EXPERIENCES THAT CONNECT, CONVERT, AND GROW.</div>
+      <section className="py-20 px-6 md:px-12 max-w-6xl mx-auto text-center relative">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl my-6 font-extrabold leading-tight tracking-tight space-y-4">
+            <div>WE ARE AT THE HEART OF DIGITAL INNOVATION! HELPING BRANDS STAND OUT WITH DESIGN, STRATEGY, AND CODE. BUILDING EXPERIENCES THAT CONNECT, CONVERT, AND GROW.</div>
+       
           </h1>
         </div>
-
-<img src={img} alt="" className="h-[600px] w-[600px]"/>
-        <p className="text-[#cccccc] text-lg md:text-xl max-w-3xl mx-auto">
-          FAVMedia is a creative agency built for the modern era — blending
-          code, design, and strategy to help brands stand out in the digital
-          world. From building interactive websites to crafting engaging videos,
-          we help creators and businesses connect through storytelling and tech.
-        </p>
-        <div className="absolute w-60 h-60 bg-[#2a2a2a] rounded-full blur-3xl opacity-20 top-10 left-1/2 -translate-x-1/2 z-0" />
+        <div className="flex items-center justify-center w-full">
+          <img
+            src={img}
+            alt=""
+            className="w-full max-w-[600px] h-auto object-contain"
+          />
+        </div>
+        <div className="flex flex-col mt-16 gap-4">
+          <CompaniesStrip2 duration={5} />
+          <CompaniesStrip2 duration={10} />
+          <CompaniesStrip2 duration={7} />
+        </div>
       </section>
 
-      {/* Founders Section */}
+      {/* Our Story */}
+      <section className="w-full px-6 py-16 md:py-24 flex justify-center items-center">
+        <div className="bg-[#0D0D0D] border border-[#333] rounded-3xl p-6 md:p-12 max-w-6xl w-full flex flex-col md:flex-row items-center gap-10 md:gap-16 shadow-2xl">
+          <div className="relative w-full md:max-w-sm">
+            <img
+              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6"
+              alt="Team"
+              className="rounded-2xl w-full h-auto object-cover border border-[#1a1a1a]"
+            />
+            <div className="absolute bottom-[-20px] left-[-20px] bg-white text-black font-bold rounded-2xl w-24 h-24 flex flex-col items-center justify-center shadow-md text-sm border border-[#444]">
+              Our <br /> Story
+            </div>
+          </div>
+
+          <div className="max-w-xl text-[#cccccc] text-base md:text-lg">
+            <p>
+              At FAVMedia, we started with a simple yet powerful mission: to
+              help businesses create smart, impactful, and data-driven content.
+              Since 2023, a team of developers, marketers, and creatives has
+              come together to build an agency that blends technology and
+              storytelling into exceptional digital experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-black text-white font-sans">
+        <div className="max-w-5xl mx-auto px-6 md:px-0">
+          <div className="grid gap-6 md:grid-cols-3 text-center">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="bg-[#0D0D0D] border border-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-xl hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+              >
+                <h3 className="text-xl md:text-2xl font-semibold mb-2">
+                  {stat.title}
+                </h3>
+                <p className="text-[#a0a0a0] text-sm md:text-base leading-relaxed">
+                  {stat.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founders */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 py-20">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-          Meet Our Visionaries
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-8">
+          Our Team
         </h2>
-        <div className="grid md:grid-cols-2 gap-12">
-          {founders.map((founder, idx) => (
+        <p className="text-center text-gray-400 mb-16 max-w-3xl mx-auto text-sm md:text-base">
+          We’re a passionate team of innovators, problem-solvers, and creative
+          thinkers dedicated to making a difference and inspiring.
+        </p>
+
+        <div className="grid gap-12 md:grid-cols-2">
+          {founders.map((member, idx) => (
             <div
               key={idx}
-              className="relative bg-[#0D0D0D] p-8 rounded-2xl border border-[#333] shadow-xl hover:shadow-[0_0_40px_rgba(255,255,255,0.1)] transition-all duration-300"
+              className="relative bg-[#0D0D0D] rounded-2xl p-6 md:p-8 border border-[#222] shadow-lg"
             >
-              {/* Lightning icon */}
-              <div className="absolute top-4 right-4 text-[#4a4a4a] opacity-10 z-0">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-20 w-20"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <div className="relative z-10 flex items-center mb-6">
+              <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-[140px] h-[140px] rounded-full overflow-hidden border-4 border-[#222]">
                 <img
-                  src={founder.image}
-                  alt={founder.name}
-                  className="w-24 h-24 rounded-full object-cover border-4 border-[#4a4a4a] shadow-lg mr-5"
+                  src={member.image}
+                  alt={member.name}
+                  className="object-cover w-full h-full"
                 />
-                <div>
-                  <h3 className="text-2xl font-semibold text-[#e0e0e0] mb-1">
-                    {founder.name}
-                  </h3>
-                  <p className="text-[#aaaaaa] text-base italic">
-                    {founder.role}
-                  </p>
-                </div>
               </div>
-              <p className="text-[#cccccc] mb-6 leading-relaxed">
-                {founder.bio}
-              </p>
-              <ul className="text-[#bbbbbb] space-y-3 text-sm">
-                {founder.highlights.map((point, i) => (
-                  <li key={i} className="flex items-start">
-                    <span className="text-[#888] mr-2 mt-1">✔️</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+
+              <div className="mt-20 text-center">
+                <h3 className="text-2xl font-semibold">
+                  {member.name.split(" ")[0]}
+                  <span className="text-white">
+                    {" "}
+                    {member.name.split(" ")[1]}
+                  </span>
+                </h3>
+                <p className="text-sm text-white mt-1 mb-4">{member.role}</p>
+                <p className="text-[#cccccc] text-sm leading-relaxed">
+                  {member.bio}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Core Values Section */}
+      {/* Core Values */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 py-20 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12">
+        <h2 className="text-3xl md:text-5xl font-bold mb-12">
           Our Core Values
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
