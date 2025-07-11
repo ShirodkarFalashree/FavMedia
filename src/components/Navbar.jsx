@@ -2,12 +2,21 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { BsStars, BsList, BsX } from "react-icons/bs";
 import favlogo from "../assets/favlogo.png"
+
 const Navbar = () => {
   const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
-<nav className='fixed top-0 left-0 w-full h-[80px] z-50 backdrop-blur-md bg-[#000]/60 flex justify-between items-center px-4 sm:px-8 lg:px-12'>
+    <nav className='fixed top-0 left-0 w-full h-[80px] z-50 backdrop-blur-md bg-[#000]/60 flex justify-between items-center px-4 sm:px-8 lg:px-12'>
       {/* Logo */}
       <div className='text-white text-xl sm:text-2xl font-bold '>
         <Link to="/"><img src={favlogo} className='w-[200px] md:w-[220px]' /></Link>
@@ -17,7 +26,21 @@ const Navbar = () => {
       <div className='hidden md:flex gap-6 items-center'>
         <div className='flex gap-4 lg:gap-6 items-center'>
           <Link className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' to="/">Home</Link>
-          <Link className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' to="/#services">Services</Link>
+          <Link 
+            className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' 
+            to="/"
+            onClick={(e) => {
+              e.preventDefault();
+              if (window.location.pathname === '/') {
+                scrollToSection('services');
+              } else {
+                navigate('/');
+                setTimeout(() => scrollToSection('services'), 100);
+              }
+            }}
+          >
+            Services
+          </Link>
           <Link className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' to="/about-us">About us</Link>
           <Link className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' to="/blogs">Blogs</Link>
         </div>
@@ -53,8 +76,17 @@ const Navbar = () => {
           </Link>
           <Link 
             className='w-full text-center py-2 text-subtext hover:text-white' 
-            to="/#services"
-            onClick={() => setIsMenuOpen(false)}
+            to="/"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsMenuOpen(false);
+              if (window.location.pathname === '/') {
+                scrollToSection('services');
+              } else {
+                navigate('/');
+                setTimeout(() => scrollToSection('services'), 100);
+              }
+            }}
           >
             Services
           </Link>

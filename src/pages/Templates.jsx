@@ -32,7 +32,7 @@ const Templates = () => {
   });
 
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 font-inter md:pt-30">
+    <div className="min-h-screen bg-black flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 font-inter pt-24 md:pt-30 ">
       {/* header section */}
       <div className='text-center flex flex-col gap-4 md:gap-6 items-center justify-center mb-6 md:mb-6'>
         <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-[54px] leading-[1.2] md:leading-[50px]'>

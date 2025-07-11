@@ -46,7 +46,7 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => (
       {isOpen ? <FiMinus /> : <FiPlus />}
     </button>
     {isOpen && (
-      <div className="px-4 pb-4 text-sm text-subtext bg-[#111]">
+      <div className="px-4 py-4 text-sm text-subtext bg-[#111]">
         {answer}
       </div>
     )}
@@ -64,7 +64,7 @@ const Faq = () => {
     <section className="py-20 px-6 text-white bg-black">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 ">
         {/* Left Content */}
-<div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
+        <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
           <div className="p-[1px] rounded-full bg-gradient-to-r from-white to-transparent mb-4 w-fit">
             <div className="flex items-center justify-center bg-black p-2 rounded-full gap-2">
               <GoDotFill className="animate-[blink_1s_infinite] text-white" />
