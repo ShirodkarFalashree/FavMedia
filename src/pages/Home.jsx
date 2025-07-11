@@ -15,21 +15,20 @@ import ProcessSection3 from '../sections/ProcessSection3'
 const Home = () => {
   return (
     <div className='pt-14 md:pt-0'>
-        <Hero/>
-        <CompaniesStrip />
-<div id='services'>
-          <Services/>
+      <Hero />
+      <CompaniesStrip />
+      <div id='services'>
+        <Services />
 
-</div>
-        <ProcessSection/>
-        
-        <ProcessSection2/>
-        <ProcessSection3/>
-        <Pricing/>
-        <BookACall/>
-        <Testimonials/>
-        <Faq/>
-        <Contact/>
+      </div>
+      <ProcessSection />
+      <ProcessSection2 />
+      <ProcessSection3 />
+      <Pricing />
+      <BookACall />
+      <Testimonials />
+      <Faq />
+      <Contact />
     </div>
   )
 }

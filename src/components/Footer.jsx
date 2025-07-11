@@ -5,7 +5,7 @@ const Footer = () => {
   const navigate = useNavigate(); // ✅ This was missing
 
   return (
-    <footer className="bg-[#0D0D0D] text-white py-16 px-8 md:px-10 border-t border-[#ffffff46] shadow-[0_0_5px_5px_#ffffff0e] mt-16 ">
+    <footer className="bg-[#0D0D0D] text-white py-16 px-8 md:px-10 border-t border-[#ffffff46] shadow-[0_0_5px_5px_#ffffff0e] mt-0 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 ">
         {/* Logo & Quote */}
         <div>
