@@ -8,6 +8,7 @@ import Templates from './pages/Templates';
 import Contact from './pages/Contact';
 import ChatBotWidget from './components/ChatBotWidget ';
 import CursorTrail from './components/CursorTrail';
+import BlogDetail from './pages/BlogDetail';
 
 const Layout = () => {
   return (
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/blogs',
         element: <Blogs />,
+      },
+      {
+        path:"/blog/:slug",
+        element:<BlogDetail />
       },
       {
         path: '/templates',
