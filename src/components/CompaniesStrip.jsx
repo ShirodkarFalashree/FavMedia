@@ -87,7 +87,7 @@ const CompaniesStrip = () => {
           }
 
           .animate-scroll {
-            animation: scroll-left 40s linear infinite;
+            animation: scroll-left 20s linear infinite;
           }
 
           .gradient-mask {

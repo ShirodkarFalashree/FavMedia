@@ -14,7 +14,7 @@ import ProcessSection3 from '../sections/ProcessSection3'
 
 const Home = () => {
   return (
-    <div>
+    <div className='pt-14 md:pt-0'>
         <Hero/>
         <CompaniesStrip />
 <div id='services'>

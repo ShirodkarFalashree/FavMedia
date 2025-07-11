@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { BsStars, BsList, BsX } from "react-icons/bs";
-
+import favlogo from "../assets/favlogo.png"
 const Navbar = () => {
   const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -9,8 +9,8 @@ const Navbar = () => {
   return (
 <nav className='fixed top-0 left-0 w-full h-[80px] z-50 backdrop-blur-md bg-[#000]/60 flex justify-between items-center px-4 sm:px-8 lg:px-12'>
       {/* Logo */}
-      <div className='text-white text-xl sm:text-2xl font-bold'>
-        <Link to="/">FAVMedia</Link>
+      <div className='text-white text-xl sm:text-2xl font-bold '>
+        <Link to="/"><img src={favlogo} className='w-[200px] md:w-[220px]' /></Link>
       </div>
 
       {/* Desktop Navigation */}

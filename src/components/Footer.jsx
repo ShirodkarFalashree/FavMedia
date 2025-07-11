@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from 'react-router-dom';
-
+import favlogo from "../assets/favlogo.png"
 const Footer = () => {
   const navigate = useNavigate(); // ✅ This was missing
 
@@ -10,9 +10,7 @@ const Footer = () => {
         {/* Logo & Quote */}
         <div>
           <div className="flex items-center gap-2 mb-6">
-            <div className='text-white text-xl sm:text-2xl font-bold'>
-              <Link to="/">FAVMedia</Link>
-            </div>
+                     <Link to="/"><img src={favlogo} className='w-[220px] md:mt-[-6px]' /></Link>
           </div>
           <p className="text-gray-400">
             Made remotely with <span className="text-gray-500">🩶</span> and passion
