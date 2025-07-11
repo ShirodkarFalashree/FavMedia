@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
 
         {/* Subscribe Form */}
-        <div>
+        {/* <div>
           <h2 className="text-lg font-semibold mb-4">Subscribe Form</h2>
           <div className="flex items-center bg-[#1a1a1a] rounded-3xl px-4 py-1">
             <input
@@ -55,7 +55,7 @@ const Footer = () => {
               Get Templates
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
