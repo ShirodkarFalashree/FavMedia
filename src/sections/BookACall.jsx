@@ -22,7 +22,7 @@ const BookACall = () => {
           {/* CTA Button */}
           <button
             className="text-sm sm:text-[15px] px-6 py-3 transition-colors duration-300 text-subtext hover:text-white border border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
-            onClick={() => navigate("/templates")}
+            onClick={() => navigate("/contact")}
           >
             Book A Free Call Now
           </button>

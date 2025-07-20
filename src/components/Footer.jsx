@@ -1,61 +1,66 @@
 import React from "react";
-import { Link, useNavigate } from 'react-router-dom';
-import favlogo from "../assets/favlogo.png"
-const Footer = () => {
-  const navigate = useNavigate(); // ✅ This was missing
+import { Link } from 'react-router-dom';
+import favlogo from "../assets/favlogo.png";
 
+const Footer = () => {
   return (
-    <footer className="bg-[#0D0D0D] text-white py-16 px-8 md:px-10 border-t border-[#ffffff46] shadow-[0_0_5px_5px_#ffffff0e] mt-0 ">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 ">
-        {/* Logo & Quote */}
+    <footer className="bg-[#0D0D0D] text-white py-16 px-8 md:px-10 border-t border-[#ffffff46] shadow-[0_0_5px_5px_#ffffff0e] mt-0" role="contentinfo">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+        
+        {/* Logo & Brand Message */}
         <div>
-          <div className="flex items-center gap-2 mb-6">
-                     <Link to="/"><img src={favlogo} className='w-[220px] md:mt-[-6px]' /></Link>
-          </div>
-          <p className="text-gray-400">
-            Made remotely with <span className="text-gray-500">🩶</span> and passion
-            <br />– <span className="font-semibold text-white">fav.</span>
+          <Link to="/" aria-label="Go to homepage">
+            <img
+              src={favlogo}
+              alt="favMedia logo"
+              className="w-[220px] md:mt-[-6px]"
+            />
+          </Link>
+          <p className="text-gray-400 mt-4 leading-relaxed">
+            Crafting websites with passion, precision, and purpose. <br />
+            Built by <span className="font-semibold text-white">favMedia</span>.
           </p>
         </div>
 
-        {/* Template Pages */}
-        <div>
-          <h2 className="text-lg font-semibold mb-4">Template Pages</h2>
+        {/* Website Navigation */}
+        <nav aria-label="Footer Navigation">
+          <h2 className="text-lg font-semibold mb-4">Explore</h2>
           <ul className="space-y-2 text-gray-400">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>FAQ</li>
+            <li><Link to="/" className="hover:text-white">Home</Link></li>
+            <li><Link to="/about-us" className="hover:text-white">About Us</Link></li>
+            <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+            <li><Link to="/" className="hover:text-white">FAQ</Link></li>
           </ul>
-        </div>
+        </nav>
 
-        {/* Social */}
-        <div>
-          <h2 className="text-lg font-semibold mb-4">Social</h2>
+        {/* Social Media */}
+        <nav aria-label="Social Media Links">
+          <h2 className="text-lg font-semibold mb-4">Connect With Us</h2>
           <ul className="space-y-2 text-gray-400">
-            <li>Twitter</li>
-            <li>Instagram</li>
-            <li>Youtube</li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">Twitter</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">YouTube</a></li>
           </ul>
-        </div>
+        </nav>
 
-        {/* Subscribe Form */}
-        {/* <div>
-          <h2 className="text-lg font-semibold mb-4">Subscribe Form</h2>
-          <div className="flex items-center bg-[#1a1a1a] rounded-3xl px-4 py-1">
-            <input
-              type="email"
-              placeholder="Enter Your Email..."
-              className="bg-transparent outline-none text-white flex-grow text-sm placeholder-gray-400 px-2"
-            />
-            <button
-              className="px-4 py-2 text-sm whitespace-nowrap transition-colors duration-300 text-white hover:text-white flex items-center justify-center border border-[#a9a9a954] rounded-3xl bg-[#0F0F0F] h-[38px] cursor-pointer shadow-[inset_0_-0.4px_0.4px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.5px_1.5px_-2.5px_rgba(0,0,0,0.596),inset_0_-6px_6px_-3.75px_rgba(0,0,0,0.235)]"
-              onClick={() => navigate("/templates")}
-            >
-              Get Templates
-            </button>
-          </div>
-        </div> */}
+        {/* CTA: Templates */}
+        <div>
+          <h2 className="text-lg font-semibold mb-4">Free Templates</h2>
+          <p className="text-gray-400 mb-3 text-sm">
+            Discover fast-launch templates built for performance and design.
+          </p>
+          <Link
+            to="/templates"
+            className="inline-block px-5 py-2 text-sm font-medium text-white border border-[#a9a9a954] rounded-3xl bg-[#0F0F0F] hover:bg-white hover:text-black transition duration-300"
+          >
+            Browse Templates
+          </Link>
+        </div>
+      </div>
+
+      {/* Bottom Note */}
+      <div className="mt-16 text-center text-gray-500 text-sm border-t border-[#ffffff1a] pt-6">
+        © {new Date().getFullYear()} favMedia. All rights reserved. | <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
       </div>
     </footer>
   );

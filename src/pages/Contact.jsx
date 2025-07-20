@@ -74,7 +74,7 @@ const Contact = () => {
             </div>
             <div className='w-full h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-gray-500 to-black mb-3 sm:mb-[16px]'></div>
             <div className='text-center text-sm sm:text-[16px] leading-[1.6] md:leading-[26px] text-subtext'>
-              +91 9029656714
+              +91 8097966352 <br />+91 9029656714
             </div>
           </div>
           <div className='border-[1px] cursor-pointer rounded-4xl border-[#ffffff46] shadow-[0_0_5px_5px_#ffffff0e] w-full p-4 sm:p-[20px] flex flex-col items-center'>
@@ -86,7 +86,7 @@ const Contact = () => {
             </div>
             <div className='w-full h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-gray-500 to-black mb-3 sm:mb-[16px]'></div>
             <div className='text-center text-sm sm:text-[16px] leading-[1.6] md:leading-[26px] text-subtext'>
-              +91 9029656714
+              +91 8097966352 <br />+91 9029656714
             </div>
           </div>
           <div
@@ -101,7 +101,7 @@ const Contact = () => {
             </div>
             <div className='w-full h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-gray-500 to-black mb-3 sm:mb-[16px]'></div>
             <div className='text-center text-sm sm:text-[16px] leading-[1.6] md:leading-[26px] text-subtext'>
-              kakadeavishkar84@gmail.com
+            favmediabusiness@gmail.com
             </div>
           </div>
           <div className='border-[1px] cursor-pointer rounded-4xl border-[#ffffff46] shadow-[0_0_5px_5px_#ffffff0e] w-full p-4 sm:p-[20px] flex flex-col items-center'>
@@ -112,9 +112,17 @@ const Contact = () => {
               Schedule A Meet
             </div>
             <div className='w-full h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-gray-500 to-black mb-3 sm:mb-[16px]'></div>
-            <div className='text-center text-sm sm:text-[16px] leading-[1.6] md:leading-[26px] text-subtext'>
-              kakadeavishkar84@gmail.com
-            </div>
+         <div
+  className='text-center text-sm sm:text-[16px] leading-[1.6] md:leading-[26px] text-subtext cursor-pointer '
+  onClick={() => window.open(
+    'https://mail.google.com/mail/?view=cm&fs=1&to=favmediabusiness@gmail.com&su=Meeting Request&body=Hi, I’d like to schedule a meeting. Please let me know your availability.',
+    '_blank'
+  )}
+>
+  favmediabusiness@gmail.com
+</div>
+
+
           </div>
         </div>
       </div>

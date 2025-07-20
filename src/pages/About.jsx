@@ -1,21 +1,23 @@
 import React from "react";
-import img from "../assets/process1.avif";
+import { Helmet } from "react-helmet";
+import img from "../assets/system.png";
+// import img from "../assets/system2.jpg";
+import fal from '../assets/falashree.png'
+import avi from '../assets/avishkar.jpg'
 import CompaniesStrip2 from "../components/CompaniesStrip2";
-
+import team from '../assets/team.jpg'
 const founders = [
   {
     name: "Falashree Shirodkar",
     role: "Co-founder, FAVMedia",
-    image:
-      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-    bio: `Falashree is the co-founder of FAVMedia — a modern agency focused on website development, video editing, and digital strategy. As a Computer Engineering student and full-stack developer, she has worked with startups and businesses across industries, building sleek, performance-driven solutions.`,
+    image:fal,
+    bio: `Falashree is the co-founder of FAVMedia — a digital-first agency offering website development, video editing, and creative strategy. With a background in full-stack development, she has built impactful solutions for startups and brands alike.`,
   },
   {
     name: "Avishkar Kakade",
     role: "Co-founder, FAVMedia",
-    image:
-      "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-    bio: `Avishkar is the driving force behind operations and creative direction at FAVMedia. With strong leadership and a deep passion for digital business, he leads strategy, marketing, and content creation.`,
+    image:avi,
+    bio: `Avishkar leads operations and digital direction at FAVMedia. His passion for content and strategic marketing makes him an integral part of the agency’s success and client growth journey.`,
   },
 ];
 
@@ -37,21 +39,33 @@ const stats = [
 const About = () => {
   return (
     <div className="min-h-screen bg-black text-white font-sans">
+      <Helmet>
+        <meta
+          name="description"
+          content="Learn about FavMedia, a creative website development and digital strategy agency. Meet our founders, explore our mission, and see how we help brands grow online."
+        />
+        <meta
+          name="keywords"
+          content="FavMedia, website development, digital agency, creative agency, co-founders, custom website design, India web agency"
+        />
+        <link rel="canonical" href="https://favmedia.in/about" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
       {/* Hero Section */}
-      <section className="py-20 px-6 md:px-12 max-w-6xl mx-auto text-center relative">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl my-6 font-extrabold leading-tight tracking-tight space-y-4">
-            <div>WE ARE AT THE HEART OF DIGITAL INNOVATION! HELPING BRANDS STAND OUT WITH DESIGN, STRATEGY, AND CODE. BUILDING EXPERIENCES THAT CONNECT, CONVERT, AND GROW.</div>
-       
-          </h1>
-        </div>
-        <div className="flex items-center justify-center w-full">
-          <img
-            src={img}
-            alt=""
-            className="w-full max-w-[600px] h-auto object-contain"
-          />
-        </div>
+      <section
+        id="about-hero"
+        className="py-20 px-6 md:px-12 max-w-6xl mx-auto text-center"
+      >
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-10">
+          We are at the heart of digital innovation — helping brands stand out
+          with design, strategy, and code.
+        </h1>
+        <img
+          src={img}
+          alt="Creative process at FavMedia"
+          className="w-full max-w-[600px] mx-auto object-contain rounded-4xl filter grayscale"
+        />
         <div className="flex flex-col mt-16 gap-4">
           <CompaniesStrip2 duration={5} />
           <CompaniesStrip2 duration={10} />
@@ -60,44 +74,39 @@ const About = () => {
       </section>
 
       {/* Our Story */}
-      <section className="w-full px-6 py-16 md:py-24 flex justify-center items-center">
-        <div className="bg-[#0D0D0D] border border-[#333] rounded-3xl p-6 md:p-12 max-w-6xl w-full flex flex-col md:flex-row items-center gap-10 md:gap-16 shadow-2xl">
+      <section id="our-story" className="w-full px-6 py-16 md:py-24">
+        <div className="bg-[#0D0D0D] border border-[#333] rounded-3xl p-6 md:p-12 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
           <div className="relative w-full md:max-w-sm">
             <img
-              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6"
-              alt="Team"
-              className="rounded-2xl w-full h-auto object-cover border border-[#1a1a1a]"
+              src={team}
+              alt="FavMedia team working together"
+              className="rounded-2xl w-full object-cover border border-[#1a1a1a]"
             />
-            <div className="absolute bottom-[-20px] left-[-20px] bg-white text-black font-bold rounded-2xl w-24 h-24 flex flex-col items-center justify-center shadow-md text-sm border border-[#444]">
-              Our <br /> Story
+            <div className="absolute bottom-[-20px] left-[-20px] bg-white text-black font-extrabold rounded-full w-24 h-24 flex items-center justify-center text-xl border border-[#444] text-center">
+              OUR <br /> STORY
             </div>
           </div>
-
           <div className="max-w-xl text-[#cccccc] text-base md:text-lg">
             <p>
-              At FAVMedia, we started with a simple yet powerful mission: to
-              help businesses create smart, impactful, and data-driven content.
-              Since 2023, a team of developers, marketers, and creatives has
-              come together to build an agency that blends technology and
-              storytelling into exceptional digital experiences.
+              FavMedia began in 2023 with a mission to empower startups, creators, and businesses with powerful digital presence. Our team of developers, strategists, and creatives blends code and design to craft websites that convert, connect, and stand out.
             </p>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-black text-white font-sans">
-        <div className="max-w-5xl mx-auto px-6 md:px-0">
+      <section id="stats" className="py-16 bg-black">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="grid gap-6 md:grid-cols-3 text-center">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-[#0D0D0D] border border-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-xl hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+                className="bg-[#0D0D0D] border border-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-xl hover:scale-[1.02] transition duration-300"
               >
                 <h3 className="text-xl md:text-2xl font-semibold mb-2">
                   {stat.title}
                 </h3>
-                <p className="text-[#a0a0a0] text-sm md:text-base leading-relaxed">
+                <p className="text-[#a0a0a0] text-sm md:text-base">
                   {stat.description}
                 </p>
               </div>
@@ -106,14 +115,14 @@ const About = () => {
         </div>
       </section>
 
-      {/* Founders */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 py-20">
+      {/* Founders Section */}
+      <section id="team" className="max-w-6xl mx-auto px-6 md:px-12 py-20">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-8">
-          Our Team
+          Meet Our Founders
         </h2>
         <p className="text-center text-gray-400 mb-16 max-w-3xl mx-auto text-sm md:text-base">
-          We’re a passionate team of innovators, problem-solvers, and creative
-          thinkers dedicated to making a difference and inspiring.
+          Behind FavMedia is a team of passionate builders, coders, and marketers
+          — led by founders committed to pushing creative boundaries.
         </p>
 
         <div className="grid gap-12 md:grid-cols-2">
@@ -125,19 +134,13 @@ const About = () => {
               <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-[140px] h-[140px] rounded-full overflow-hidden border-4 border-[#222]">
                 <img
                   src={member.image}
-                  alt={member.name}
+                  alt={`Portrait of ${member.name}`}
                   className="object-cover w-full h-full"
                 />
               </div>
 
               <div className="mt-20 text-center">
-                <h3 className="text-2xl font-semibold">
-                  {member.name.split(" ")[0]}
-                  <span className="text-white">
-                    {" "}
-                    {member.name.split(" ")[1]}
-                  </span>
-                </h3>
+                <h3 className="text-2xl font-semibold">{member.name}</h3>
                 <p className="text-sm text-white mt-1 mb-4">{member.role}</p>
                 <p className="text-[#cccccc] text-sm leading-relaxed">
                   {member.bio}
@@ -149,10 +152,8 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 py-20 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-12">
-          Our Core Values
-        </h2>
+      <section id="values" className="max-w-6xl mx-auto px-6 md:px-12 py-20 text-center">
+        <h2 className="text-3xl md:text-5xl font-bold mb-12">Our Core Values</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {

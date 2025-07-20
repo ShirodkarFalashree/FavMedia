@@ -24,8 +24,8 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="text-white min-h-screen bg-black px-6 md:px-32 py-16">
-      <img src={blog.image} alt={blog.title} className="w-full max-h-[400px] object-cover rounded-xl mb-8" />
+    <div className="text-white min-h-screen bg-black px-6 mt-1 md:px-32 py-16">
+      <img src={blog.image} alt={blog.title} className="w-full max-h-[400px] object-contain rounded-xl mb-8" />
       <h1 className="text-3xl md:text-5xl font-bold mb-4">{blog.title}</h1>
       <p className="text-sm text-gray-400 mb-6">{blog.date}</p>
       <p className="text-lg leading-8 text-[#dddddd]">{blog.content}</p>

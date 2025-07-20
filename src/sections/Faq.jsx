@@ -35,18 +35,29 @@ const faqData = [
   },
 ];
 
-
-const AccordionItem = ({ question, answer, isOpen, onToggle }) => (
-  <div className="border border-[#333] rounded-xl overflow-hidden">
+const AccordionItem = ({ question, answer, isOpen, onToggle, index }) => (
+  <div
+    className="border border-[#333] rounded-xl overflow-hidden"
+    role="region"
+    aria-labelledby={`faq-heading-${index}`}
+  >
     <button
-      className="w-full flex justify-between items-center p-4  text-left text-white bg-[#111] hover:bg-[#1a1a1a] transition"
+      id={`faq-heading-${index}`}
+      className="w-full flex justify-between items-center p-4 text-left text-white bg-[#111] hover:bg-[#1a1a1a] transition"
       onClick={onToggle}
+      aria-expanded={isOpen}
+      aria-controls={`faq-content-${index}`}
     >
-      <span className="text-sm sm:text-base">{question}</span>
-      {isOpen ? <FiMinus /> : <FiPlus />}
+      <span className="text-sm sm:text-base font-medium">{question}</span>
+      {isOpen ? <FiMinus aria-hidden="true" /> : <FiPlus aria-hidden="true" />}
     </button>
     {isOpen && (
-      <div className="px-4 py-4 text-sm text-subtext bg-[#111]">
+      <div
+        id={`faq-content-${index}`}
+        className="px-4 py-4 text-sm text-subtext bg-[#111]"
+        role="region"
+        aria-live="polite"
+      >
         {answer}
       </div>
     )}
@@ -61,23 +72,33 @@ const Faq = () => {
   };
 
   return (
-    <section className="py-20 px-6 text-white bg-black">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 ">
+    <section
+      className="py-20 px-6 text-white bg-black"
+      aria-labelledby="faq-section-title"
+    >
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Left Content */}
         <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
           <div className="p-[1px] rounded-full bg-gradient-to-r from-white to-transparent mb-4 w-fit">
             <div className="flex items-center justify-center bg-black p-2 rounded-full gap-2">
-              <GoDotFill className="animate-[blink_1s_infinite] text-white" />
+              <GoDotFill
+                className="animate-[blink_1s_infinite] text-white"
+                aria-hidden="true"
+              />
               <p className="text-sm">FAQ</p>
             </div>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-semibold mb-4">
+          <h2
+            id="faq-section-title"
+            className="text-3xl sm:text-5xl font-semibold mb-4"
+          >
             Frequently <br className="hidden sm:block" />
             Asked Questions
           </h2>
           <p className="text-subtext text-sm sm:text-base max-w-md">
-            Have questions? Our FAQ section has you covered with quick answers to the most common inquiries.
+            Find answers to the most common questions about our web design,
+            templates, and customization services.
           </p>
         </div>
 
@@ -86,6 +107,7 @@ const Faq = () => {
           {faqData.map((item, index) => (
             <AccordionItem
               key={index}
+              index={index}
               question={item.question}
               answer={item.answer}
               isOpen={openIndex === index}

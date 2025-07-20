@@ -25,8 +25,21 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <div className='hidden md:flex gap-6 items-center'>
         <div className='flex gap-4 lg:gap-6 items-center'>
-          <Link className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' to="/">Home</Link>
-          <Link 
+ <Link 
+            className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' 
+            to="/"
+            onClick={(e) => {
+              e.preventDefault();
+              if (window.location.pathname === '/') {
+                scrollToSection('hero');
+              } else {
+                navigate('/');
+                setTimeout(() => scrollToSection('hero'), 100);
+              }
+            }}
+          >
+            Home
+          </Link>          <Link 
             className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' 
             to="/"
             onClick={(e) => {

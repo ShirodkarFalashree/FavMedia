@@ -28,7 +28,8 @@ Customization
 
             </h2>
             <p className='text-subtext w-full sm:max-w-[600px] md:w-full text-sm sm:text-[16px] leading-[1.6] md:leading-[26px]'>
-              FavMedia gives you flexible solutions to launch your website — whether you need a quick template, custom tweaks, or a fully unique design.
+Pick a template and let us tailor it to match your brand with two free revisions.
+
             </p>
           </div>
           
@@ -39,32 +40,38 @@ Customization
                 <div className='w-full flex justify-between'>
                   <div className='w-10 h-10 rounded-xl bg-[#0F0F0F] border-[1px] border-[#a9a9a954] flex items-center justify-center'>1</div>
                   <div>
-                    <button
+                    {/* <button
+                      className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
+                      onClick={() => { navigate("/templates") }}
+                    >
+                      Access
+                    </button> */}
+                  </div>
+                </div>
+                <div className='w-full h-auto sm:h-[133px] flex flex-col justify-between my-4 sm:my-0'>
+                  <p className='text-lg sm:text-[18px] leading-[26px] text-white mb-2'>Select the Template</p>
+                  <div className='w-[240px] h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-[#8b8b8b] to-black mb-3 sm:mb-[16px]'></div>
+                  <p className='text-base sm:text-[16px] leading-[26px] text-subtext'>Browse our curated collection of professionally designed website templates and pick the one that best suits your business or personal brand.</p>
+                </div>
+                <div className='w-full flex gap-2 mt-4 sm:mt-0'>
+                   <button
                       className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
                       onClick={() => { navigate("/templates") }}
                     >
                       Access
                     </button>
-                  </div>
-                </div>
-                <div className='w-full h-auto sm:h-[133px] flex flex-col justify-between my-4 sm:my-0'>
-                  <p className='text-lg sm:text-[18px] leading-[26px] text-white mb-2'>Advanced AI, Streamlined Design</p>
-                  <div className='w-[240px] h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-[#8b8b8b] to-black mb-3 sm:mb-[16px]'></div>
-                  <p className='text-base sm:text-[16px] leading-[26px] text-subtext'>Nubien blends cutting-edge AI capabilities with sleek, modern design. It's built for agencies that need to showcase sophisticated technology in a user-friendly and visually compelling way.</p>
-                </div>
-                <div className='w-full flex gap-2 mt-4 sm:mt-0'>
                   <button
                     className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
-                    onClick={() => { navigate("/templates") }}
+                    onClick={() => { navigate("/contact") }}
                   >
-                    AI Design
+                    Contact
                   </button>
-                  <button
+                  {/* <button
                     className="w-[100px] sm:w-[140px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
                     onClick={() => { navigate("/templates") }}
                   >
                     Tech Innovation
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
@@ -75,32 +82,38 @@ Customization
                <div className='w-full flex justify-between'>
                   <div className='w-10 h-10 rounded-xl bg-[#0F0F0F] border-[1px] border-[#a9a9a954] flex items-center justify-center'>2</div>
                   <div>
-                    <button
+                    {/* <button
+                      className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
+                      onClick={() => { navigate("/templates") }}
+                    >
+                      Access
+                    </button> */}
+                  </div>
+                </div>
+                <div className='w-full h-auto sm:h-[133px] flex flex-col justify-between my-4 sm:my-0'>
+                  <p className='text-lg sm:text-[18px] leading-[26px] text-white mb-2'>Contact Our Team for Customization</p>
+                  <div className='w-[240px] h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-[#8b8b8b] to-black mb-3 sm:mb-[16px]'></div>
+                  <p className='text-base sm:text-[16px] leading-[26px] text-subtext'>Tell us what you want to tweak—like changing colors, images, fonts, layout sections, or adding your brand elements.</p>
+                </div>
+                <div className='w-full flex gap-2 mt-4 sm:mt-0'>
+                   <button
                       className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
                       onClick={() => { navigate("/templates") }}
                     >
                       Access
                     </button>
-                  </div>
-                </div>
-                <div className='w-full h-auto sm:h-[133px] flex flex-col justify-between my-4 sm:my-0'>
-                  <p className='text-lg sm:text-[18px] leading-[26px] text-white mb-2'>Advanced AI, Streamlined Design</p>
-                  <div className='w-[240px] h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-[#8b8b8b] to-black mb-3 sm:mb-[16px]'></div>
-                  <p className='text-base sm:text-[16px] leading-[26px] text-subtext'>Nubien blends cutting-edge AI capabilities with sleek, modern design. It's built for agencies that need to showcase sophisticated technology in a user-friendly and visually compelling way.</p>
-                </div>
-                <div className='w-full flex gap-2 mt-4 sm:mt-0'>
                   <button
                     className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
-                    onClick={() => { navigate("/templates") }}
+                    onClick={() => { navigate("/contact") }}
                   >
-                    AI Design
+                    Contact
                   </button>
-                  <button
+                  {/* <button
                     className="w-[100px] sm:w-[140px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
                     onClick={() => { navigate("/templates") }}
                   >
                     Tech Innovation
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
@@ -111,32 +124,80 @@ Customization
                <div className='w-full flex justify-between'>
                   <div className='w-10 h-10 rounded-xl bg-[#0F0F0F] border-[1px] border-[#a9a9a954] flex items-center justify-center'>3</div>
                   <div>
-                    <button
+                    {/* <button
+                      className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
+                      onClick={() => { navigate("/templates") }}
+                    >
+                      Access
+                    </button> */}
+                  </div>
+                </div>
+                <div className='w-full h-auto sm:h-[133px] flex flex-col justify-between my-4 sm:my-0'>
+                  <p className='text-lg sm:text-[18px] leading-[26px] text-white mb-2'>Free 2 Rounds of Revision</p>
+                  <div className='w-[240px] h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-[#8b8b8b] to-black mb-3 sm:mb-[16px]'></div>
+                  <p className='text-base sm:text-[16px] leading-[26px] text-subtext'>You’ll get two free revision rounds where you can suggest changes, ensuring the final result matches your expectations.</p>
+                </div>
+                <div className='w-full flex gap-2 mt-4 sm:mt-0'>
+                  <button
                       className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
                       onClick={() => { navigate("/templates") }}
                     >
                       Access
                     </button>
-                  </div>
-                </div>
-                <div className='w-full h-auto sm:h-[133px] flex flex-col justify-between my-4 sm:my-0'>
-                  <p className='text-lg sm:text-[18px] leading-[26px] text-white mb-2'>Advanced AI, Streamlined Design</p>
-                  <div className='w-[240px] h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-[#8b8b8b] to-black mb-3 sm:mb-[16px]'></div>
-                  <p className='text-base sm:text-[16px] leading-[26px] text-subtext'>Nubien blends cutting-edge AI capabilities with sleek, modern design. It's built for agencies that need to showcase sophisticated technology in a user-friendly and visually compelling way.</p>
-                </div>
-                <div className='w-full flex gap-2 mt-4 sm:mt-0'>
                   <button
                     className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
-                    onClick={() => { navigate("/templates") }}
+                    onClick={() => { navigate("/contact") }}
                   >
-                    AI Design
+                    Contact
                   </button>
-                  <button
+                  {/* <button
                     className="w-[100px] sm:w-[140px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
                     onClick={() => { navigate("/templates") }}
                   >
                     Tech Innovation
+                  </button> */}
+                </div>
+              </div>
+            </div>
+
+            {/* step 4 */}
+             <div className='w-full md:max-w-[588px] h-auto sm:h-[363px] flex items-center justify-center rounded-3xl border-[1px] border-[#ffffff46]'>
+              <div className='w-full md:w-[588px] h-auto sm:h-[363px] p-6 sm:p-[30px] flex flex-col items-center justify-around rounded-3xl shadow-[inset_0_0_40px_0_rgba(255,255,255,0.2)]'>
+               <div className='w-full flex justify-between'>
+                  <div className='w-10 h-10 rounded-xl bg-[#0F0F0F] border-[1px] border-[#a9a9a954] flex items-center justify-center'>4</div>
+                  <div>
+                    {/* <button
+                      className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
+                      onClick={() => { navigate("/templates") }}
+                    >
+                      Access
+                    </button> */}
+                  </div>
+                </div>
+                <div className='w-full h-auto sm:h-[133px] flex flex-col justify-between my-4 sm:my-0'>
+                  <p className='text-lg sm:text-[18px] leading-[26px] text-white mb-2'>Get Your Customized Template</p>
+                  <div className='w-[240px] h-[1px] sm:h-[2px] bg-gradient-to-r from-black via-[#8b8b8b] to-black mb-3 sm:mb-[16px]'></div>
+                  <p className='text-base sm:text-[16px] leading-[26px] text-subtext'>Once revisions are done, you receive a polished, brand-aligned website ready to go live.</p>
+                </div>
+                <div className='w-full flex gap-2 mt-4 sm:mt-0'>
+                  <button
+                      className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
+                      onClick={() => { navigate("/templates") }}
+                    >
+                      Access
+                    </button>
+                  <button
+                    className="w-[100px] sm:w-[100px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
+                    onClick={() => { navigate("/contact") }}
+                  >
+                    Contact
                   </button>
+                  {/* <button
+                    className="w-[100px] sm:w-[140px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-10 sm:h-10 cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
+                    onClick={() => { navigate("/templates") }}
+                  >
+                    Tech Innovation
+                  </button> */}
                 </div>
               </div>
             </div>
