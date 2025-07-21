@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import ChatBotWidget from './components/ChatBotWidget ';
 import CursorTrail from './components/CursorTrail';
 import BlogDetail from './pages/BlogDetail';
+import TemplateDetails from './pages/TemplateDetails';
 
 const Layout = () => {
   return (
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: '/templates',
         element: <Templates />,
+      },
+      {
+        path: '/template/:id',
+        element: <TemplateDetails />,
       },
       {
         path: '/contact',

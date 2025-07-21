@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import mockup1 from "../assets/mockup1.png"
 import { LuSearch } from 'react-icons/lu';
 import p1 from "../assets/process1.avif"
+import { Link } from 'react-router-dom';
 // Main App component
 const Templates = () => {
   // Sample data for the grid items
@@ -56,54 +57,35 @@ const Templates = () => {
       <main className="w-full max-w-7xl mt-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredGridItems.map((item) => (
-            <div
-              key={item.id}
-              className="relative bg-gray-800 rounded-xl overflow-hidden shadow-lg group"
-            >
-              <img
-                src={item.imageUrl}
-                alt={`Grid item ${item.id}`}
-                className="w-full h-70 object-cover rounded-xl transform transition-all duration-300 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
-                // Fallback for broken images
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = `https://placehold.co/600x400/000000/FFFFFF?text=Image+${item.id}+Error`;
-                }}
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent rounded-b-xl flex items-center justify-between ">
-                <div>
-                  <a
-                    href="#"
-                    className="text-white text-sm flex  items-center transition-colors duration-200"
-                  >
-                    {item.title}
-
-                  </a>
-                  <a
-                    href="#"
-                    className="text-subtext text-sm flex  items-center transition-colors duration-200"
-                  >
-                    {item.price}
-
-                  </a>
-                </div>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </div>
+           <Link to={`/template/${item.id}`} key={item.id}>
+           <div className="relative bg-gray-800 rounded-xl overflow-hidden shadow-lg group">
+             <img
+               src={item.imageUrl}
+               alt={`Grid item ${item.id}`}
+               className="w-full h-70 object-cover rounded-xl transform transition-all duration-300 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+               onError={(e) => {
+                 e.target.onerror = null;
+                 e.target.src = `https://placehold.co/600x400/000000/FFFFFF?text=Image+${item.id}+Error`;
+               }}
+             />
+             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent rounded-b-xl flex items-center justify-between">
+               <div>
+                 <p className="text-white text-sm">{item.title}</p>
+                 <p className="text-subtext text-sm">{item.price}</p>
+               </div>
+               <svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 className="h-6 w-6 ml-1"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+                 strokeWidth={2}
+               >
+                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+               </svg>
+             </div>
+           </div>
+         </Link>
           ))}
         </div>
       </main>
