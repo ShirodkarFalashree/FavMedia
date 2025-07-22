@@ -37,9 +37,9 @@ const Footer = () => {
         <nav aria-label="Social Media Links">
           <h2 className="text-lg font-semibold mb-4">Connect With Us</h2>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">Twitter</a></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a></li>
-            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">YouTube</a></li>
+            <li><a href="https://x.com/favmedia" target="_blank" rel="noopener noreferrer" className="hover:text-white">Twitter</a></li>
+            <li><a href="https://www.instagram.com/f.a.v.media" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a></li>
+            {/* <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">YouTube</a></li> */}
           </ul>
         </nav>
 
