@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className='fixed top-0 left-0 w-full h-[80px] z-50 backdrop-blur-md bg-[#000]/60 flex justify-between items-center px-4 sm:px-8 lg:px-12'>
       {/* Logo */}
       <div className='text-white text-xl sm:text-2xl font-bold '>
-        <Link to="/" className='font-figtreee text-3xl'>FAVMedia</Link>
+<Link to="/" id="logo" className='font-figtreee text-3xl'>FAVMedia</Link>
       </div>
 
       {/* Desktop Navigation */}

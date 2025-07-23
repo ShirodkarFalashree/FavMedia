@@ -9,13 +9,10 @@ const Footer = () => {
         
         {/* Logo & Brand Message */}
         <div>
-          <Link to="/" aria-label="Go to homepage">
-            <img
-              src={favlogo}
-              alt="favMedia logo"
-              className="w-[220px] md:mt-[-6px]"
-            />
-          </Link>
+<div className='text-white text-xl sm:text-2xl font-bold '>
+<Link to="/"  className='font-figtreee text-3xl'>FAVMedia</Link>
+      </div>
+         
           <p className="text-gray-400 mt-4 leading-relaxed">
             Crafting websites with passion, precision, and purpose. <br />
             Built by <span className="font-semibold text-white">favMedia</span>.
