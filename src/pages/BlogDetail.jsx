@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import blogPosts from '../components/BlogPosts';
 
 const BlogDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []) 
   // Find the blog that matches the slug
   const blog = blogPosts.find((post) => post.slug === slug);
 

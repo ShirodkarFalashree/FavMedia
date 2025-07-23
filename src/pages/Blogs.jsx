@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -29,7 +29,9 @@ const blogPosts = [
 
 const Blogs = () => {
   const navigate = useNavigate();
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []) 
   return (
     <section className="pt-32 pb-20 px-6 md:px-12 text-white min-h-screen bg-black">
       {/* SEO Meta Tags */}

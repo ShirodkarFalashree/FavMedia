@@ -46,8 +46,8 @@ const plans = [
   },
   {
     name: 'Fully Custom',
-    price: '₹49,999',
-    period: ' (One-time)',
+    price: 'Starting at ₹29,999',
+    period: '(Price varies based on features)',
     description:
       'Enterprise-grade website development tailored from scratch for high-converting, scalable brand presence.',
     projects: 'Your wish, our command ',
@@ -67,7 +67,7 @@ const plans = [
 // The rest of your Pricing component remains the same
 
 const Pricing = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   return (
     <section
       className="flex flex-col items-center justify-center px-4 py-20 text-white bg-black"
@@ -119,10 +119,14 @@ const Pricing = () => {
             {/* Plan Details */}
             <div className="flex-grow flex flex-col gap-4">
               <h3 className="text-xl font-semibold">{plan.name} Plan</h3>
-              <p className="text-3xl font-bold">
+
+              {plan.name == "Fully Custom" ? (<p className="text-3xl font-bold">
+                <p className='mb-[-12px]'>{plan.price}</p>
+                <span className="text-base font-medium text-gray-400 ">{plan.period}</span>
+              </p>) : (<p className="text-3xl font-bold">
                 {plan.price}
                 <span className="text-base font-medium text-gray-400">{plan.period}</span>
-              </p>
+              </p>)}
               <p className="text-subtext">{plan.description}</p>
 
               {/* Project & Revision Info */}
@@ -140,9 +144,8 @@ const Pricing = () => {
                   </li>
                 ))}
                 <li
-                  className={`flex items-center gap-2 ${
-                    plan.hasGuarantee ? 'text-gray-300' : 'text-gray-500 line-through'
-                  }`}
+                  className={`flex items-center gap-2 ${plan.hasGuarantee ? 'text-gray-300' : 'text-gray-500 line-through'
+                    }`}
                 >
                   <FaCheck className="text-gray-500" />
                   30-Day Money-Back Guarantee
@@ -155,7 +158,7 @@ const Pricing = () => {
               <button
                 className="px-6 py-3 bg-black text-white rounded-xl w-full h-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                 aria-label={`Book a free website consultation for ${plan.name}`}
-onClick={() => navigate("/contact")}
+                onClick={() => navigate("/contact")}
 
               >
                 Book a Free Call Now

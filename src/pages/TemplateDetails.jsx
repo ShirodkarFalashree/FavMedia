@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import mockup1 from "../assets/mockup1.png";
 import p1 from "../assets/process1.avif";
@@ -181,7 +181,9 @@ const TemplateDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const template = data.find((t) => t.id === parseInt(id));
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []) 
   if (!template)
     return <div className="text-white p-8">Template not found</div>;
 

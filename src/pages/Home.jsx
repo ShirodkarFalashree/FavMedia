@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hero from '../sections/Hero'
 import Services from '../sections/Services'
 import ProcessSection from '../sections/ProcessSection'
@@ -13,6 +13,10 @@ import ProcessSection2 from '../sections/ProcessSection2'
 import ProcessSection3 from '../sections/ProcessSection3'
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []) 
+
   return (
     <div className='pt-14 md:pt-0'>
       <Hero />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import mockup1 from "../assets/mockup1.png"
 import { LuSearch } from 'react-icons/lu';
 import p1 from "../assets/process1.avif"
@@ -202,7 +202,9 @@ const Templates = () => {
       item.description.toLowerCase().includes(query) // Also search by description for better results
     );
   });
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []) 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 font-inter pt-24 md:pt-30 ">
       {/* header section */}

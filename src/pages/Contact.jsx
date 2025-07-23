@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoFlashOutline } from 'react-icons/io5';
 import { MdCall, MdClose, MdEmail, MdPerson, MdMessage } from 'react-icons/md';
 import emailjs from 'emailjs-com';
@@ -22,6 +22,9 @@ const Contact = () => {
       [name]: value
     }));
   };
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []) 
 
   const handleSubmit = async (e) => {
     e.preventDefault();

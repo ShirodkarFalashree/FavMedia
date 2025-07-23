@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import img from "../assets/system.png";
 // import img from "../assets/system2.jpg";
@@ -37,6 +37,9 @@ const stats = [
 ];
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []) 
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       <Helmet>
