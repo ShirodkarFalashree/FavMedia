@@ -122,7 +122,7 @@ const CursorTrail = () => {
       idleTimer.current = setTimeout(() => {
         setIsIdle(true);
         idle = true;
-      }, 1000);
+      }, 2000);
     };
 
     const handleMouseMove = (e) => {

@@ -1,7 +1,10 @@
 import React from "react";
 import { GoDotFill } from "react-icons/go";
+import { Link, useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+    const navigate = useNavigate()
+  
   return (
     <section
       className="bg-black text-white md:min-h-[300px] flex flex-col justify-center items-center py-10 md:py-0 gap-0 md:gap-2 px-4 sm:px-6 lg:px-8 md:pt-[150px] md:mb-10"
@@ -35,16 +38,19 @@ const Hero = () => {
       <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-6 w-full sm:w-auto px-4 sm:px-0">
         <div className="p-[2px] rounded-xl bg-gradient-to-r from-gray-200 via-black to-gray-200 w-full sm:w-auto">
           <button
-            className="px-4 py-3 sm:px-6 sm:py-3 bg-black text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 text-sm sm:text-base"
+            className="px-4 py-3 sm:px-6 sm:py-3 bg-black cursor-pointer text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 text-sm sm:text-base"
             aria-label="Book a free consultation call for website development"
+onClick={() => navigate('/contact')}
           >
             Book A Free Call Now
           </button>
         </div>
         <div className="p-[2px] rounded-xl bg-gradient-to-r from-gray-200 via-black to-gray-200 w-full sm:w-auto">
           <button
-            className="px-4 py-3 sm:px-6 sm:py-3 bg-black text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 text-sm sm:text-base"
+            className="px-4 py-3 sm:px-6 sm:py-3 bg-black cursor-pointer text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 text-sm sm:text-base"
             aria-label="Explore professional web design templates"
+                        onClick={()=>navigate('/templates')}
+
           >
             Get Templates
           </button>
