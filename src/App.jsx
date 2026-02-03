@@ -17,7 +17,7 @@ const Layout = () => {
       <CursorTrail/>
       <Navbar />
       <Outlet />
-      <ChatBotWidget/>
+      {/* <ChatBotWidget/> */}
       <Footer />
     </div>
   );

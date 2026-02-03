@@ -4,17 +4,18 @@ import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+
   return (
     <>
       <Helmet>
         <meta
           name="description"
-          content="Book a free consultation with FavMedia. We offer flexible website development services including templates, custom design, and full-stack development."
+          content="Book a free consultation with FavMedia. We design and develop modern, high-performance websites for growing businesses."
         />
         <meta
           name="keywords"
-          content="FavMedia, website development, custom website design, responsive web design, web development agency, book a free call"
+          content="FavMedia, website development, web design agency, business websites, custom web development"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://favmedia.in/contact" />
@@ -22,40 +23,50 @@ const Contact = () => {
 
       <section
         id="contact"
-        className="flex flex-col items-center justify-center py-16 px-4 md:px-0"
+        className="relative overflow-hidden py-0 px-4 flex items-center justify-center"
       >
-        <div className="w-full max-w-[840px] p-6 rounded-2xl flex flex-col items-center gap-6 text-center">
+        {/* Black & White Gradient Background */}
+        <div className="absolute inset-0 -z-10">
+          {/* Soft white glow */}
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-white/10 blur-[140px]" />
+
+          {/* Secondary glow */}
+          <div className="absolute top-1/3 right-[-200px] w-[500px] h-[500px] rounded-full bg-white/5 blur-[120px]" />
+
+          {/* Base gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black" />
+        </div>
+
+        {/* Content Card */}
+        <div className="w-full max-w-[2000px] rounded-2xl border border-white/10 bg-black/50 backdrop-blur-xl p-8 md:py-12 mb-4 text-center flex flex-col items-center gap-6">
+          
           {/* Badge */}
-          <div className="p-[1px] rounded-full bg-gradient-to-r from-white to-transparent">
-            <div className="flex items-center justify-center bg-white dark:bg-black p-2 rounded-full gap-2">
-              <span className="animate-[blink_1s_infinite]">
-                <GoDotFill />
-              </span>
-              <span className="font-semibold">Work with us</span>
-            </div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 text-sm text-white/80">
+            <GoDotFill className="text-white" />
+            Work with FavMedia
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] leading-tight md:leading-[92px] font-bold text-white max-w-4xl">
-            Ready to Elevate Your Brand with Next-Gen Website Innovation?
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight max-w-3xl">
+            Let’s Build a Website That Grows Your Business
           </h1>
 
           {/* Subtext */}
-          <p className="text-lg text-subtext max-w-2xl">
-            Take the next step with FavMedia. Whether you need a quick launch or a completely custom design, we’re here to bring your digital vision to life.
+          <p className="text-base md:text-lg text-white/60 max-w-2xl">
+            We help brands launch high-quality websites with clean design,
+            strong performance, and long-term scalability.
           </p>
 
           {/* CTA Button */}
-          <div className="p-[2px] rounded-xl bg-gradient-to-r from-gray-300 via-black to-gray-300 shadow-lg">
-              <button
-                className="px-6 py-3 bg-black text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition duration-200"
-                aria-label="Book a Free Call"
-                            onClick={() => navigate("/contact")}
-
-              >
-                Book A Free Call Now
-              </button>
-            
+          <div className="mt-4">
+            <button
+              onClick={() => navigate("/contact")}
+              className="px-8 py-3 rounded-xl bg-white text-black font-medium
+              hover:bg-gray-200 transition-all duration-200"
+              aria-label="Book a Free Consultation"
+            >
+              Book a Free Consultation
+            </button>
           </div>
         </div>
       </section>

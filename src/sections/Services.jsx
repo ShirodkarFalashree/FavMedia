@@ -959,7 +959,7 @@ const Services = () => {
         <div className="flex justify-center mb-10">
           <div className="p-[1px] rounded-full bg-gradient-to-r from-white/20 to-white/0">
             <div className="flex items-center gap-2 px-4 py-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm">
-              <GoDotFill className="animate-pulse text-blue-400" />
+              <GoDotFill className="animate-pulse text-white" />
               Services
             </div>
           </div>
@@ -967,10 +967,10 @@ const Services = () => {
 
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
+          <h2 className="text-4xl md:text-5xl font-semibold text-white tracking-tight">
             What We Provide
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-subtext text-lg mt-2">
             From social growth to high-performance web experiences — we build
             digital products that stand out.
           </p>

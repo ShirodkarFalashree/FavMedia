@@ -55,14 +55,14 @@ const Navbar = () => {
             Services
           </Link>
           <Link className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' to="/about-us">About us</Link>
-          <Link className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' to="/blogs">Blogs</Link>
+          {/* <Link className='cursor-pointer text-subtext hover:text-white text-sm sm:text-[15px]' to="/blogs">Blogs</Link> */}
         </div>
         <div>
           <button
             className="w-[140px] sm:w-[160px] border-[1px] text-sm sm:text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-[40px] sm:h-[44px] cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
-            onClick={() => { navigate("/templates") }}
+            onClick={() => { navigate("/contact") }}
           >
-            <BsStars className='text-[18px] sm:text-[20px]' /> Get Templates
+            <BsStars className='text-[18px] sm:text-[20px]' /> Get In Touch
           </button>
         </div>
       </div>
@@ -110,21 +110,21 @@ const Navbar = () => {
           >
             About us
           </Link>
-          <Link 
+          {/* <Link 
             className='w-full text-center py-2 text-subtext hover:text-white' 
             to="/blogs"
             onClick={() => setIsMenuOpen(false)}
           >
             Blogs
-          </Link>
+          </Link> */}
           <button
             className="w-full max-w-[160px] border-[1px] text-[15px] transition-colors duration-300 text-subtext hover:text-white flex items-center gap-1 justify-center border-[#a9a9a954] rounded-4xl bg-[#0F0F0F] h-[44px] cursor-pointer shadow-[inset_0_-0.48175px_0.48175px_-1.25px_rgba(0,0,0,0.68),inset_0_-1.83083px_1.83083px_-2.5px_rgba(0,0,0,0.596),inset_0_-8px_8px_-3.75px_rgba(0,0,0,0.235)]"
             onClick={() => { 
-              navigate("/templates")
+              navigate("/contact")
               setIsMenuOpen(false)
             }}
           >
-            <BsStars className='text-[20px]' /> Get Templates
+            <BsStars className='text-[20px]' /> Get In Touch
           </button>
         </div>
       )}

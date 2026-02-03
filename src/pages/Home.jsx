@@ -25,13 +25,13 @@ const Home = () => {
         <Services />
 
       </div>
-      <ProcessSection />
-      <ProcessSection2 />
-      <ProcessSection3 />
-      <Pricing />
-      <BookACall />
+      {/* <ProcessSection /> */}
+      {/* <ProcessSection2 /> */}
+      {/* <ProcessSection3 /> */}
+      {/* <Pricing /> */}
+      {/* <BookACall /> */}
       <Testimonials />
-      <Faq />
+      {/* <Faq /> */}
       <Contact />
     </div>
   )
