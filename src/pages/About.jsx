@@ -86,25 +86,50 @@ const About = () => {
         </div>
 
       {/* Our Story */}
-      <section id="our-story" className="w-full px-6 py-16 md:py-24">
+      {/* <section id="our-story" className="w-full px-6 py-16 md:py-24">
         <div className="bg-[#0D0D0D] border border-[#333] rounded-3xl p-6 md:p-12 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
-          <div className="relative w-full md:max-w-sm">
-            <img
-              src={team}
-              alt="FavMedia team working together"
-              className="rounded-2xl w-full object-cover border border-[#1a1a1a]"
-            />
-            {/* <div className="absolute bottom-[-20px] left-[-20px] bg-white text-black font-extrabold rounded-full w-24 h-24 flex items-center justify-center text-xl border border-[#444] text-center">
-              OUR <br /> STORY
-            </div> */}
-          </div>
+          
           <div className="max-w-xl text-[#cccccc] text-base md:text-lg">
             <p>
               FavMedia began in 2025 with a mission to empower startups, creators, and businesses with powerful digital presence. Our team of developers, strategists, and creatives blends code and design to craft websites that convert, connect, and stand out.
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <section
+  id="our-story"
+  className="w-full px-6 py-16 md:py-24 bg-black"
+>
+  <div className="bg-[#0D0D0D] border border-[#262626] rounded-3xl p-8 md:p-14 max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-10 md:gap-16">
+
+    {/* Left Accent / Label */}
+    <div className="md:w-1/3">
+      <span className="inline-block mb-4 text-sm tracking-widest uppercase text-white/50">
+        Our Story
+      </span>
+      <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight">
+        Built to Help Brands <br /> Grow Online
+      </h2>
+    </div>
+
+    {/* Content */}
+    <div className="md:w-2/3 text-white/70 text-base md:text-lg leading-relaxed">
+      <p>
+        FavMedia began in 2025 with a simple mission — to help startups,
+        creators, and businesses build a powerful digital presence.
+      </p>
+
+      <p className="mt-4">
+        Our team of developers, marketers, and creatives work at the
+        intersection of <span className="text-white">design, technology, and content</span> to
+        create websites, social campaigns, and video experiences that don’t
+        just look good — they perform.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Stats Section */}
       <section id="stats" className="py-16 bg-black">
