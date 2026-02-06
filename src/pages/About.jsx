@@ -132,7 +132,7 @@ const About = () => {
 
 
       {/* Stats Section */}
-      <section id="stats" className="py-16 bg-black">
+      <section id="stats" className="py-16 w-full bg-black">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid gap-6 md:grid-cols-2 text-center">
             {stats.map((stat, index) => (
@@ -153,7 +153,7 @@ const About = () => {
       </section>
 
       {/* Founders Section */}
-      <section id="team" className="max-w-6xl mx-auto px-6 md:px-12 py-20">
+      <section id="team" className="max-w-6xl mx-auto px-3 md:px-1 py-20">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-8">
           Meet Our Founders
         </h2>
