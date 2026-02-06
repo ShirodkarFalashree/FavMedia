@@ -6,6 +6,7 @@ import fal from '../assets/falashree.png'
 import avi from '../assets/avishkar.jpg'
 import CompaniesStrip2 from "../components/CompaniesStrip2";
 import team from '../assets/team.jpg'
+import { CircleChevronDown } from "lucide-react";
 const founders = [
   {
     name: "Falashree Shirodkar",
@@ -58,9 +59,9 @@ const About = () => {
       {/* Hero Section */}
       <section
         id="about-hero"
-        className="py-20 px-6 md:px-12 max-w-6xl mx-auto text-center"
+        className="py-20  md:px-12 mx-auto text-center min-h-screen"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-10">
+        {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-10">
           We are at the heart of digital innovation — helping brands stand out
           with design, strategy, and code.
         </h1>
@@ -68,13 +69,21 @@ const About = () => {
           src={img}
           alt="Creative process at FavMedia"
           className="w-full max-w-[600px] mx-auto object-contain rounded-4xl filter grayscale"
-        />
-        <div className="flex flex-col mt-16 gap-4">
+        /> */}
+        <div className="text-left mt-80  ">
+          <p className="text-7xl text-white/20">See</p>
+          <h1 className="text-[220px] tracking-[-4px] font-semibold leading-50">WHO WE ARE</h1>
+        </div>
+        <div className="w-full flex items-center justify-center">
+        <CircleChevronDown className="mt-20 text-white/20 hover:text-white"  size={40} />
+        </div>
+       
+      </section>
+      <div className="flex flex-col mt-16 gap-4">
           <CompaniesStrip2 duration={5} />
           <CompaniesStrip2 duration={10} />
           <CompaniesStrip2 duration={7} />
         </div>
-      </section>
 
       {/* Our Story */}
       <section id="our-story" className="w-full px-6 py-16 md:py-24">

@@ -90,7 +90,7 @@ const CompaniesStrip2 = ({ duration = 20 }) => {
   return (
     <div className="bg-transparent flex items-center justify-center font-sans relative">
       <style>
-        {`
+        {/* {`
           .gradient-mask {
             mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
             -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -131,7 +131,7 @@ const CompaniesStrip2 = ({ duration = 20 }) => {
               backdrop-filter: blur(2px);
             }
           }
-        `}
+        `} */}
       </style>
 
       <div className="w-full relative overflow-hidden py-4 blur-edges">
