@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import img from "../assets/system.png";
 // import img from "../assets/system2.jpg";
-import fal from '../assets/falashree.png'
+import fal from '../assets/falashree.jpg'
 import avi from '../assets/avishkar.jpg'
 import CompaniesStrip2 from "../components/CompaniesStrip2";
 import team from '../assets/team.jpg'
@@ -27,10 +27,10 @@ const stats = [
     title: "+15 Clients",
     description: "Worked with creators, startups & brands across industries",
   },
-  {
-    title: "+30 Templates Sold",
-    description: "Modern website & design templates crafted with purpose",
-  },
+  // {
+  //   title: "+30 Templates Sold",
+  //   description: "Modern website & design templates crafted with purpose",
+  // },
   {
     title: "And Growing...",
     description: "New collaborations, projects, and opportunities every week",
@@ -94,13 +94,13 @@ const About = () => {
               alt="FavMedia team working together"
               className="rounded-2xl w-full object-cover border border-[#1a1a1a]"
             />
-            <div className="absolute bottom-[-20px] left-[-20px] bg-white text-black font-extrabold rounded-full w-24 h-24 flex items-center justify-center text-xl border border-[#444] text-center">
+            {/* <div className="absolute bottom-[-20px] left-[-20px] bg-white text-black font-extrabold rounded-full w-24 h-24 flex items-center justify-center text-xl border border-[#444] text-center">
               OUR <br /> STORY
-            </div>
+            </div> */}
           </div>
           <div className="max-w-xl text-[#cccccc] text-base md:text-lg">
             <p>
-              FavMedia began in 2023 with a mission to empower startups, creators, and businesses with powerful digital presence. Our team of developers, strategists, and creatives blends code and design to craft websites that convert, connect, and stand out.
+              FavMedia began in 2025 with a mission to empower startups, creators, and businesses with powerful digital presence. Our team of developers, strategists, and creatives blends code and design to craft websites that convert, connect, and stand out.
             </p>
           </div>
         </div>
@@ -109,7 +109,7 @@ const About = () => {
       {/* Stats Section */}
       <section id="stats" className="py-16 bg-black">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="grid gap-6 md:grid-cols-3 text-center">
+          <div className="grid gap-6 md:grid-cols-2 text-center">
             {stats.map((stat, index) => (
               <div
                 key={index}

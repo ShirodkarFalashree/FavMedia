@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { GoDotFill } from "react-icons/go";
 
 const testimonials = [
   {
-    text: " Would recommend to anyone! Absolutely loved and quality. Would recommend to anyone Absolutely loved the speed and quality. Would recommend to anyone Absolutely loved the speed and quality. Would recommend to anyone",
+    text: " Would recommend to anyone! Absolutely loved the speed and quality.",
     name: "Neha",
     role: "Business Owner",
   },
   {
-    text: "Our brand's Insta feed has never looked better. Stellar design! Our brand's Insta feed has never looked better. Our brand's Insta feed has never looked better. Stellar Our brand's Insta feed has never looked better. ",
+    text: "Our brand's Insta feed has never looked better. Stellar design! ",
     name: "Manju",
     role: "NGO Worker",
   },
   {
-    text: "The UI designs fit our dev fit our dev fit our dev fit our dev fit our dev stack perfectly. Great job! The UI designs fit our dev stack perfectly. Great job! The UI designs fit our dev stack perfectly. Great job! ",
+    text: "The UI designs fit our dev stack perfectly. Great job! ",
     name: "GitHub User",
     role: "Frontend Developer",
   },
-  
 ];
 
 const Testimonials = () => {
@@ -34,9 +34,12 @@ const Testimonials = () => {
     <section className="w-full bg-black py-10">
       <div className="max-w-4xl mx-auto flex flex-col items-center justify-center px-6 text-center relative">
         {/* Section Tag */}
-        <span className="inline-block mb-4 px-4 py-1 text-sm border border-white/20 rounded-full text-white/70">
-          Testimonials
-        </span>
+        <div className="p-[1px] rounded-full ">
+          <div className="flex items-center gap-2 px-4 py-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm mb-10">
+            <GoDotFill className="animate-pulse text-white" />
+            Testimonials
+          </div>
+        </div>
 
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-semibold text-white tracking-tight">
@@ -50,12 +53,8 @@ const Testimonials = () => {
 
         {/* Client Info */}
         <div className="mt-20">
-          <h4 className="text-lg font-medium text-white">
-            {name}
-          </h4>
-          <p className="mt-1 text-sm text-white/50">
-            {role}
-          </p>
+          <h4 className="text-lg font-medium text-white">{name}</h4>
+          <p className="mt-1 text-sm text-white/50">{role}</p>
         </div>
 
         {/* Navigation */}

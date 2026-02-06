@@ -47,15 +47,23 @@ const Contact = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight max-w-3xl">
+          {/* <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight max-w-3xl">
             Let’s Build a Website That Grows Your Business
           </h1>
 
-          {/* Subtext */}
+          
           <p className="text-base md:text-lg text-white/60 max-w-2xl">
             We help brands launch high-quality websites with clean design,
             strong performance, and long-term scalability.
-          </p>
+          </p> */}
+<h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight max-w-3xl">
+  Everything Your Brand Needs to Stand Out Online
+</h1>
+
+<p className="text-base md:text-lg text-white/60 max-w-2xl">
+  Websites, social media marketing, and video ads — built to capture attention,
+  convert users, and scale your business.
+</p>
 
           {/* CTA Button */}
           <div className="mt-4">

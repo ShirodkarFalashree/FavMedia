@@ -827,12 +827,12 @@ const serviceData = [
     description: "Editing, VFX, & Promotional Content",
     files: [
       { 
-        image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44c?q=80&w=2070&auto=format&fit=crop", 
+        image: "https://images.unsplash.com/photo-1686061592315-af9342dc8d74?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         height: "h-32", 
         rotate: "-rotate-6" 
       },
       { 
-        image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2000&auto=format&fit=crop", 
+        image: "https://images.unsplash.com/photo-1686061592315-af9342dc8d74?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         height: "h-40", 
         rotate: "rotate-6" 
       }
