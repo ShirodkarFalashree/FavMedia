@@ -74,7 +74,7 @@ const CompaniesStrip = () => {
   const duplicatedCompanies = [...companies, ...companies];
 
   return (
-    <div className="bg-transparent flex items-center justify-center p-4 font-sans relative mb-10">
+    <div className="bg-transparent flex items-center justify-center p-4 font-sans relative mb-0">
       <style>
         {`
           @keyframes scroll-left {

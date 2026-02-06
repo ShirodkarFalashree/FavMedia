@@ -69,7 +69,7 @@ const Contact = () => {
           <div className="mt-4">
             <button
               onClick={() => navigate("/contact")}
-              className="px-8 py-3 rounded-xl bg-white text-black font-medium
+              className="px-8 py-3 cursor-pointer rounded-xl bg-white text-black font-medium
               hover:bg-gray-200 transition-all duration-200"
               aria-label="Book a Free Consultation"
             >

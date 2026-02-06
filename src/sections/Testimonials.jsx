@@ -60,14 +60,14 @@ const Testimonials = () => {
         {/* Navigation */}
         <button
           onClick={prev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/40 transition"
+          className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/40 transition"
         >
           <FiArrowLeft size={20} />
         </button>
 
         <button
           onClick={next}
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/40 transition"
+          className="absolute right-0 cursor-pointer top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/40 transition"
         >
           <FiArrowRight size={20} />
         </button>

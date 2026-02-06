@@ -10,6 +10,7 @@ import ChatBotWidget from './components/ChatBotWidget ';
 import CursorTrail from './components/CursorTrail';
 import BlogDetail from './pages/BlogDetail';
 import TemplateDetails from './pages/TemplateDetails';
+import ServiceDetail from './pages/ServicePageDetail';
 
 const Layout = () => {
   return (
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <Navigate to="/#services" replace />, // Redirect to home with hash
+      },
+      {
+        path: '/services/:serviceId',
+        element: <ServiceDetail />, // Redirect to home with hash
       },
       {
         path: '/about-us',

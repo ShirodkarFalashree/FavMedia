@@ -4,7 +4,7 @@
 
 // const Hero = () => {
 //     const navigate = useNavigate()
-  
+
 //   return (
 //     <section
 //       className="bg-black text-white md:min-h-[300px] flex flex-col justify-center items-center py-10 md:py-0 gap-0 md:gap-2 px-4 sm:px-6 lg:px-8 md:pt-[150px] md:mb-10"
@@ -78,13 +78,13 @@ const Hero = () => {
       id="hero"
     >
       {/* Animated Tagline */}
-      <div className="p-[1px] rounded-full bg-gradient-to-r from-white/20 to-white/0">
-                  <div className="flex items-center gap-2 px-4 py-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm">
-                    <GoDotFill className="animate-pulse text-white" />
-                                Building Brands That Look Sharp & Grow Fast
+      <div className="p-[1px] mb-10 rounded-full bg-gradient-to-r from-white/20 to-white/0">
+        <div className="flex items-center gap-2 px-4 py-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm">
+          <GoDotFill className="animate-pulse text-white" />
+          Building Brands That Look Sharp & Grow Fast
 
-                  </div>
-                </div>
+        </div>
+      </div>
 
       {/* Main Heading */}
       <h1 className="text-3xl sm:text-5xl md:text-6xl text-center lg:text-[72px] leading-tight md:leading-[92px] font-bold text-white max-w-4xl">
@@ -113,7 +113,7 @@ const Hero = () => {
       <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto px-4 sm:px-0">
         <div className="p-[2px] rounded-xl bg-gradient-to-r from-gray-200 via-black to-gray-200 w-full sm:w-auto">
           <button
-            className="px-4 py-3 sm:px-6 sm:py-3 bg-black text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 text-sm sm:text-base"
+            className="px-4 cursor-pointer py-3 sm:px-6 sm:py-3 bg-black text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 text-sm sm:text-base"
             onClick={() => navigate("/contact")}
           >
             Book a Free Strategy Call
@@ -122,7 +122,7 @@ const Hero = () => {
 
         <div className="p-[2px] rounded-xl bg-gradient-to-r from-gray-200 via-black to-gray-200 w-full sm:w-auto">
           <button
-            className="px-4 py-3 sm:px-6 sm:py-3 bg-black text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 text-sm sm:text-base"
+            className="px-4 cursor-pointer py-3 sm:px-6 sm:py-3 bg-black text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 text-sm sm:text-base"
             onClick={() => navigate("/templates")}
           >
             View Our Work

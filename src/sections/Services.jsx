@@ -778,64 +778,43 @@ import React from "react";
 import { GoDotFill } from "react-icons/go";
 import { motion } from "framer-motion";
 import { FaInstagram, FaGlobe, FaPlay } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 /* =======================
    SERVICES DATA
 ======================= */
 const serviceData = [
   {
+    id: "social-media-marketing", // Added ID to match JSON keys
     title: "Social Media Marketing",
-    // Accent color for the little tab top
-    color: "bg-pink-500", 
+    color: "bg-pink-500",
     icon: <FaInstagram />,
     description: "Strategy, Content Creation & Community Management",
     files: [
-      { 
-        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop", 
-        height: "h-32", 
-        rotate: "-rotate-6" 
-      },
-      { 
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop", 
-        height: "h-40", 
-        rotate: "rotate-3" 
-      }
+      { image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop", height: "h-32", rotate: "-rotate-6" },
+      { image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop", height: "h-40", rotate: "rotate-3" }
     ]
   },
   {
+    id: "websites-and-applications", // Added ID to match JSON keys
     title: "Websites & Applications",
     color: "bg-blue-500",
     icon: <FaGlobe />,
     description: "React, Next.js, High Performance UI/UX",
     files: [
-      { 
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop", 
-        height: "h-32", 
-        rotate: "-rotate-3" 
-      },
-      { 
-        image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop", 
-        height: "h-40", 
-        rotate: "rotate-2" 
-      }
+      { image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop", height: "h-32", rotate: "-rotate-3" },
+      { image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop", height: "h-40", rotate: "rotate-2" }
     ]
   },
   {
+    id: "video-ads-and-motion-graphics", // Added ID to match JSON keys
     title: "Video Ads & Motion Graphics",
     color: "bg-orange-500",
     icon: <FaPlay />,
     description: "Editing, VFX, & Promotional Content",
     files: [
-      { 
-        image: "https://images.unsplash.com/photo-1686061592315-af9342dc8d74?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-        height: "h-32", 
-        rotate: "-rotate-6" 
-      },
-      { 
-        image: "https://images.unsplash.com/photo-1686061592315-af9342dc8d74?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-        height: "h-40", 
-        rotate: "rotate-6" 
-      }
+      { image: "https://images.unsplash.com/photo-1686061592315-af9342dc8d74?q=80&w=1169&auto=format&fit=crop", height: "h-32", rotate: "-rotate-6" },
+      { image: "https://images.unsplash.com/photo-1686061592315-af9342dc8d74?q=80&w=1169&auto=format&fit=crop", height: "h-40", rotate: "rotate-6" }
     ]
   }
 ];
@@ -844,9 +823,12 @@ const serviceData = [
    FOLDER CARD COMPONENT
 ======================= */
 const FolderCard = ({ service }) => {
+  const navigate = useNavigate();
+
   return (
     <motion.div
       // 1. INCREASED HEIGHT to 400px
+      onClick={() => navigate(`/services/${service.id}`)}
       className="relative w-full max-w-[400px] h-[400px] cursor-pointer perspective-1000 mx-auto group"
       initial="initial"
       whileHover="hover"
@@ -945,8 +927,9 @@ const FolderCard = ({ service }) => {
    SERVICES SECTION
 ======================= */
 const Services = () => {
+  const navigate = useNavigate();
   return (
-    <section className="relative w-full bg-black text-white px-8 md:px-10 py-[100px] overflow-hidden">
+    <section className="relative w-full bg-black text-white px-8 md:px-10 py-[20px] mb-10 overflow-hidden">
       
       {/* Background Blobs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">

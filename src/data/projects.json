@@ -1,0 +1,95 @@
+{
+    "social-media-marketing": {
+      "title": "Social Media Marketing",
+      "tagline": "Architecting digital presence through viral storytelling.",
+      "description": "We don't just post; we engineer growth. Our approach combines data analytics with high-end aesthetics to turn followers into customers and brands into icons.",
+      "showcase": [
+        {
+          "name": "Luxe Aesthetics",
+          "type": "Brand Identity & Management",
+          "image": "https://images.unsplash.com/photo-1611162617263-4ec3060a058e?q=80&w=1000",
+          "tags": ["Instagram", "Content Strategy", "30% Growth"]
+        },
+        {
+          "name": "TechPulse Agency",
+          "type": "Performance Marketing",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000",
+          "tags": ["Ads", "Lead Gen", "High ROI"]
+        },
+        {
+          "name": "Urban Wear Co.",
+          "type": "Influencer Campaign",
+          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1000",
+          "tags": ["Reels", "Influencer Outreach", "Viral"]
+        },
+        {
+          "name": "FitLife Global",
+          "type": "Community Management",
+          "image": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=1000",
+          "tags": ["Facebook", "Engagement", "Brand Voice"]
+        }
+      ]
+    },
+    "websites-and-applications": {
+      "title": "Websites & Applications",
+      "tagline": "High-performance digital products built for scale.",
+      "description": "Custom coded solutions using the MERN stack. We focus on speed, SEO, and immersive UI/UX that converts visitors into loyal users.",
+      "showcase": [
+        {
+          "name": "DormFinder Pro",
+          "type": "Full-Stack SaaS",
+          "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000",
+          "tags": ["React", "Node.js", "Tailwind"]
+        },
+        {
+          "name": "Nova Marketplace",
+          "type": "E-Commerce",
+          "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000",
+          "tags": ["Stripe", "Next.js", "SEO"]
+        },
+        {
+          "name": "Pulse Dashboard",
+          "type": "Admin Panel",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000",
+          "tags": ["Recharts", "Authentication", "API"]
+        },
+        {
+          "name": "CryptoTrack",
+          "type": "Web3 Application",
+          "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1000",
+          "tags": ["Three.js", "Web3.js", "Dark UI"]
+        }
+      ]
+    },
+    "video-ads-and-motion-graphics": {
+      "title": "Video Ads & Motion Graphics",
+      "tagline": "Visual storytelling that stops the scroll.",
+      "description": "From high-octane product trailers to smooth 2D/3D motion graphics, we create visual assets that demand attention and drive conversions.",
+      "showcase": [
+        {
+          "name": "Z-Phone Launch",
+          "type": "3D Product Trailer",
+          "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1000",
+          "tags": ["Cinema 4D", "VFX", "Sound Design"]
+        },
+        {
+          "name": "Velocity Sneaks",
+          "type": "Social Media Ad",
+          "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44c?q=80&w=1000",
+          "tags": ["After Effects", "Roto", "Color Grade"]
+        },
+        {
+          "name": "App Explainer",
+          "type": "Motion Graphics",
+          "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000",
+          "tags": ["Flat Design", "Lottie", "2D Animation"]
+        },
+        {
+          "name": "Cinematic B-Roll",
+          "type": "Brand Film",
+          "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000",
+          "tags": ["4K", "Premiere Pro", "Storyboarding"]
+        }
+      ]
+    }
+  }
