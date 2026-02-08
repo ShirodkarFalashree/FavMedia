@@ -11,6 +11,9 @@ import CursorTrail from './components/CursorTrail';
 import BlogDetail from './pages/BlogDetail';
 import TemplateDetails from './pages/TemplateDetails';
 import ServiceDetail from './pages/ServicePageDetail';
+import SocialMediaMarketing from './pages/SocialMediaMarketing';
+import WebsitesApplications from './pages/WebsitesApplications';
+import VideoAdsMotion from './pages/VideoAdsMotion';
 
 const Layout = () => {
   return (
@@ -64,6 +67,18 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '/services/social-media-marketing',
+        element: <SocialMediaMarketing />,
+      },
+      {
+        path: '/services/websites-and-applications',
+        element: <WebsitesApplications />,
+      },
+      {
+        path: '/services/video-ads-motion-graphics',
+        element: <VideoAdsMotion />,
       },
     ],
   },
