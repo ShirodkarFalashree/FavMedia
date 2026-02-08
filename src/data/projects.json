@@ -1,95 +1,175 @@
 {
-    "social-media-marketing": {
-      "title": "Social Media Marketing",
-      "tagline": "Architecting digital presence through viral storytelling.",
-      "description": "We don't just post; we engineer growth. Our approach combines data analytics with high-end aesthetics to turn followers into customers and brands into icons.",
-      "showcase": [
-        {
-          "name": "Luxe Aesthetics",
-          "type": "Brand Identity & Management",
-          "image": "https://res.cloudinary.com/dlwy6z6mn/image/upload/v1770495434/ChatGPT_Image_Feb_8_2026_01_42_19_AM_xzgrws.png",
-          "tags": ["Instagram", "Content Strategy", "30% Growth"]
-        },
-        {
-          "name": "TechPulse Agency",
-          "type": "Performance Marketing",
-          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000",
-          "tags": ["Ads", "Lead Gen", "High ROI"]
-        },
-        {
-          "name": "Urban Wear Co.",
-          "type": "Influencer Campaign",
-          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1000",
-          "tags": ["Reels", "Influencer Outreach", "Viral"]
-        },
-        {
-          "name": "FitLife Global",
-          "type": "Community Management",
-          "image": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=1000",
-          "tags": ["Facebook", "Engagement", "Brand Voice"]
-        }
-      ]
-    },
-    "websites-and-applications": {
-      "title": "Websites & Applications",
-      "tagline": "High-performance digital products built for scale.",
-      "description": "Custom coded solutions using the MERN stack. We focus on speed, SEO, and immersive UI/UX that converts visitors into loyal users.",
-      "showcase": [
-        {
-          "name": "DormFinder Pro",
-          "type": "Full-Stack SaaS",
-          "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000",
-          "tags": ["React", "Node.js", "Tailwind"]
-        },
-        {
-          "name": "Nova Marketplace",
-          "type": "E-Commerce",
-          "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000",
-          "tags": ["Stripe", "Next.js", "SEO"]
-        },
-        {
-          "name": "Pulse Dashboard",
-          "type": "Admin Panel",
-          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000",
-          "tags": ["Recharts", "Authentication", "API"]
-        },
-        {
-          "name": "CryptoTrack",
-          "type": "Web3 Application",
-          "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1000",
-          "tags": ["Three.js", "Web3.js", "Dark UI"]
-        }
-      ]
-    },
-    "video-ads-and-motion-graphics": {
-      "title": "Video Ads & Motion Graphics",
-      "tagline": "Visual storytelling that stops the scroll.",
-      "description": "From high-octane product trailers to smooth 2D/3D motion graphics, we create visual assets that demand attention and drive conversions.",
-      "showcase": [
-        {
-          "name": "Z-Phone Launch",
-          "type": "3D Product Trailer",
-          "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1000",
-          "tags": ["Cinema 4D", "VFX", "Sound Design"]
-        },
-        {
-          "name": "Velocity Sneaks",
-          "type": "Social Media Ad",
-          "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44c?q=80&w=1000",
-          "tags": ["After Effects", "Roto", "Color Grade"]
-        },
-        {
-          "name": "App Explainer",
-          "type": "Motion Graphics",
-          "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000",
-          "tags": ["Flat Design", "Lottie", "2D Animation"]
-        },
-        {
-          "name": "Cinematic B-Roll",
-          "type": "Brand Film",
-          "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000",
-          "tags": ["4K", "Premiere Pro", "Storyboarding"]
-        }
-      ]
-    }
+  "social-media-marketing": {
+    "title": "Social Media Marketing",
+    "tagline": "Architecting digital presence through viral storytelling.",
+    "description": "We don't just post; we engineer growth. Our approach combines data analytics with high-end aesthetics to turn followers into customers and brands into icons.",
+    "showcase": [
+      {
+        "name": "Luxe Aesthetics",
+        "type": "Brand Identity & Management",
+        "image": "https://res.cloudinary.com/dlwy6z6mn/image/upload/v1770495434/ChatGPT_Image_Feb_8_2026_01_42_19_AM_xzgrws.png",
+        "tags": [
+          "Instagram",
+          "Content Strategy",
+          "30% Growth"
+        ]
+      },
+      {
+        "name": "TechPulse Agency",
+        "type": "Performance Marketing",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000",
+        "tags": [
+          "Ads",
+          "Lead Gen",
+          "High ROI"
+        ]
+      },
+      {
+        "name": "Urban Wear Co.",
+        "type": "Influencer Campaign",
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1000",
+        "tags": [
+          "Reels",
+          "Influencer Outreach",
+          "Viral"
+        ]
+      },
+      {
+        "name": "FitLife Global",
+        "type": "Community Management",
+        "image": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=1000",
+        "tags": [
+          "Facebook",
+          "Engagement",
+          "Brand Voice"
+        ]
+      }
+    ]
+  },
+  "websites-and-applications": {
+    "title": "Websites & Applications",
+    "tagline": "High-performance digital products built for scale.",
+    "description": "Custom coded solutions using the MERN stack. We focus on speed, SEO, and immersive UI/UX that converts visitors into loyal users.",
+    "showcase": [
+      {
+        "name": "Sevenisles Consultancy",
+        "type": "Business Landing Page",
+        "image": "https://res.cloudinary.com/dgof8mfp3/image/upload/v1770581451/service2_1_vqalvu.png",
+        "demoUrl": "https://www.sevenislesconsultancy.com/",
+        "tags": [
+          "ReactJS",
+          "Node.js",
+          "TailwindCSS"
+        ]
+      },
+      {
+        "name": "Rawaura Clothing",
+        "type": "E-commerce Website",
+        "image": "https://res.cloudinary.com/dgof8mfp3/image/upload/v1770581665/Screenshot_2026-02-09_at_1.44.19_AM_swwaou.png",
+        "demoUrl": "https://rawaura.vercel.app/",
+        "tags": [
+          "ReactJS",
+          "Node.js",
+          "TailwindCSS",
+          "MongoDB"
+        ]
+      },
+      {
+        "name": "Mocha Cafe",
+        "type": "Cafe Website",
+        "image": "https://res.cloudinary.com/dgof8mfp3/image/upload/v1770581896/Screenshot_2026-02-09_at_1.48.09_AM_ee0vkq.png",
+        "demoUrl": "https://mocha-cafe-alpha.vercel.app/",
+        "tags": [
+          "ReactJS",
+          "Node.js",
+          "TailwindCSS"
+        ]
+      },
+      {
+        "name": "SaaS product",
+        "type": "Landing Page",
+        "image": "https://res.cloudinary.com/dgof8mfp3/image/upload/v1770582203/Screenshot_2026-02-09_at_1.53.16_AM_hgjna1.png",
+        "demoUrl": "https://purple-theme-seven.vercel.app/",
+        "tags": [
+          "React",
+          "Node.js",
+          "TailwindCSS"
+        ]
+      }
+    ]
+  },
+  "video-ads-and-motion-graphics": {
+    "title": "Video Ads & Motion Graphics",
+    "tagline": "Visual storytelling that stops the scroll.",
+    "description": "From high-impact ads to cinematic brand films, we craft videos designed to engage, explain, and convert.",
+    "showcase": [
+      {
+        "name": "Motion Graphics Videos",
+        "type": "2D / 3D Motion Design",
+        "image": "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200/motion_graphics.jpg",
+        "description": "Engaging animated visuals to explain concepts, highlight features, and elevate brand identity.",
+        "tags": [
+          "After Effects",
+          "2D",
+          "3D",
+          "Animation"
+        ]
+      },
+      {
+        "name": "SaaS Explainer Videos",
+        "type": "Product Storytelling",
+        "image": "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200/saas_explainer.jpg",
+        "description": "Clear, concise explainer videos that simplify complex software and boost onboarding.",
+        "tags": [
+          "Explainers",
+          "UI Walkthrough",
+          "Narration"
+        ]
+      },
+      {
+        "name": "3D Product Showcase",
+        "type": "Product Visualization",
+        "image": "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200/3d_product.jpg",
+        "description": "High-end 3D renders and animations that showcase products from every angle.",
+        "tags": [
+          "3D",
+          "Product Render",
+          "Lighting"
+        ]
+      },
+      {
+        "name": "Advertisement Videos",
+        "type": "Marketing & Ads",
+        "image": "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200/advertisement_video.jpg",
+        "description": "Scroll-stopping ads optimized for social media, YouTube, and performance campaigns.",
+        "tags": [
+          "Ads",
+          "Social Media",
+          "Branding"
+        ]
+      },
+      {
+        "name": "Cinematic Videos",
+        "type": "Brand Films",
+        "image": "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200/cinematic_video.jpg",
+        "description": "Emotion-driven cinematic visuals that tell powerful brand stories.",
+        "tags": [
+          "Cinematic",
+          "Storytelling",
+          "4K"
+        ]
+      },
+      {
+        "name": "Video Shoots & Editing",
+        "type": "Production & Post",
+        "image": "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200/video_shoot.jpg",
+        "description": "Professional shoots, editing, color grading, and sound design for polished output.",
+        "tags": [
+          "Editing",
+          "Color Grading",
+          "Production"
+        ]
+      }
+    ]
   }
+}

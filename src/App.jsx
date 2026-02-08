@@ -77,7 +77,7 @@ const router = createBrowserRouter([
         element: <WebsitesApplications />,
       },
       {
-        path: '/services/video-ads-motion-graphics',
+        path: '/services/video-ads-and-motion-graphics',
         element: <VideoAdsMotion />,
       },
     ],
