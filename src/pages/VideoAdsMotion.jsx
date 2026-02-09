@@ -37,7 +37,7 @@ export default function VideoAdsMotion() {
       title: "3D Product Showcase",
       type: "Product Visualization",
       image:
-        "https://images.unsplash.com/photo-1633113215888-3a2b5d90b2ef?q=80&w=1600",
+        "https://media.istockphoto.com/id/899779268/photo/cryptocurrency-trading.webp?a=1&b=1&s=612x612&w=0&k=20&c=zCfYNlscjCgelCeOo8QCnOLgPwK1xLYkfOb7GTVWggM=",
       description:
         "High-end 3D visuals that showcase products from every angle with realistic lighting and detail.",
       tags: ["3D", "Product Render", "Lighting"],
