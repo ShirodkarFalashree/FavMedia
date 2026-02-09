@@ -1,23 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import img from "../assets/system.png";
-// import img from "../assets/system2.jpg";
-import fal from '../assets/falashree.jpg'
-import avi from '../assets/avishkar.jpg'
+import fal from "../assets/falashree.jpg";
+import avi from "../assets/avishkar.jpg";
 import CompaniesStrip2 from "../components/CompaniesStrip2";
-import team from '../assets/team.jpg'
 import { CircleChevronDown } from "lucide-react";
+
 const founders = [
   {
     name: "Falashree Shirodkar",
     role: "Co-founder, FAVMedia",
-    image:fal,
+    image: fal,
     bio: `Falashree is the co-founder of FAVMedia — a digital-first agency offering website development, video editing, and creative strategy. With a background in full-stack development, she has built impactful solutions for startups and brands alike.`,
   },
   {
     name: "Avishkar Kakade",
     role: "Co-founder, FAVMedia",
-    image:avi,
+    image: avi,
     bio: `Avishkar leads operations and digital direction at FAVMedia. His passion for content and strategic marketing makes him an integral part of the agency’s success and client growth journey.`,
   },
 ];
@@ -27,10 +26,6 @@ const stats = [
     title: "+15 Clients",
     description: "Worked with creators, startups & brands across industries",
   },
-  // {
-  //   title: "+30 Templates Sold",
-  //   description: "Modern website & design templates crafted with purpose",
-  // },
   {
     title: "And Growing...",
     description: "New collaborations, projects, and opportunities every week",
@@ -38,107 +33,121 @@ const stats = [
 ];
 
 const About = () => {
+  const nextSectionRef = useRef(null);
+
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, []) 
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-black text-white font-sans">
+    <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden">
       <Helmet>
         <meta
           name="description"
-          content="Learn about FavMedia, a creative website development and digital strategy agency. Meet our founders, explore our mission, and see how we help brands grow online."
+          content="Learn about FavMedia, a creative website development and digital strategy agency."
         />
         <meta
           name="keywords"
-          content="FavMedia, website development, digital agency, creative agency, co-founders, custom website design, India web agency"
+          content="FavMedia, website development, digital agency, creative agency"
         />
         <link rel="canonical" href="https://favmedia.in/about" />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* HERO SECTION */}
       <section
         id="about-hero"
-        className="py-20  md:px-12 mx-auto text-center min-h-screen"
+        className="md:min-h-screen flex flex-col justify-center px-4 sm:px-8 md:px-12"
       >
-        {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-10">
-          We are at the heart of digital innovation — helping brands stand out
-          with design, strategy, and code.
-        </h1>
-        <img
-          src={img}
-          alt="Creative process at FavMedia"
-          className="w-full max-w-[600px] mx-auto object-contain rounded-4xl filter grayscale"
-        /> */}
-        <div className="text-left mt-80  ">
-          <p className="text-7xl text-white/20">See</p>
-          <h1 className="text-[220px] tracking-[-4px] font-semibold leading-50">WHO WE ARE</h1>
-        </div>
-        <div className="w-full flex items-center justify-center">
-        <CircleChevronDown className="mt-20 text-white/20 hover:text-white"  size={40} />
-        </div>
-       
-      </section>
-      <div className="flex flex-col mt-16 gap-4">
-          <CompaniesStrip2 duration={5} />
-          <CompaniesStrip2 duration={10} />
-          <CompaniesStrip2 duration={7} />
+        <div className="text-left mt-32 sm:mt-40 md:mt-56 lg:mt-72">
+          <p className="text-3xl sm:text-5xl md:text-7xl text-white/20">
+            See
+          </p>
+
+          <h1
+            className="
+              text-[60px]
+              sm:text-[80px]
+              md:text-[140px]
+              lg:text-[220px]
+              font-semibold
+              tracking-tight
+              leading-none
+            "
+          >
+            WHO WE ARE
+          </h1>
         </div>
 
-      {/* Our Story */}
-      {/* <section id="our-story" className="w-full px-6 py-16 md:py-24">
-        <div className="bg-[#0D0D0D] border border-[#333] rounded-3xl p-6 md:p-12 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
-          
-          <div className="max-w-xl text-[#cccccc] text-base md:text-lg">
+        <div className="hidden md:flex justify-center">
+          <CircleChevronDown
+            onClick={() =>
+              nextSectionRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })
+            }
+            className="
+              mt-12 sm:mt-16 md:mt-20
+              text-white/30
+              hover:text-white
+              transition
+              cursor-pointer
+              animate-bounce
+            "
+            size={36}
+          />
+        </div>
+      </section>
+
+      {/* COMPANIES STRIP */}
+      <div
+        ref={nextSectionRef}
+        className="flex flex-col mt-12 sm:mt-16 gap-4 overflow-hidden"
+      >
+        <CompaniesStrip2 duration={5} />
+        <CompaniesStrip2 duration={10} />
+        <CompaniesStrip2 duration={7} />
+      </div>
+
+      {/* OUR STORY */}
+      <section
+        id="our-story"
+        className="w-full px-4 sm:px-6 py-16 md:py-24 bg-black"
+      >
+        <div className="bg-[#0D0D0D] border border-[#262626] rounded-3xl p-6 sm:p-10 md:p-14 max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16">
+          <div className="md:w-1/3">
+            <span className="inline-block mb-4 text-sm tracking-widest uppercase text-white/50">
+              Our Story
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight">
+              Built to Help Brands <br /> Grow Online
+            </h2>
+          </div>
+
+          <div className="md:w-2/3 text-white/70 text-sm sm:text-base md:text-lg leading-relaxed">
             <p>
-              FavMedia began in 2025 with a mission to empower startups, creators, and businesses with powerful digital presence. Our team of developers, strategists, and creatives blends code and design to craft websites that convert, connect, and stand out.
+              FavMedia began in 2025 with a simple mission — to help startups,
+              creators, and businesses build a powerful digital presence.
+            </p>
+
+            <p className="mt-4">
+              Our team works at the intersection of{" "}
+              <span className="text-white">design, technology, and content</span>{" "}
+              to create digital experiences that perform.
             </p>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      <section
-  id="our-story"
-  className="w-full px-6 py-16 md:py-24 bg-black"
->
-  <div className="bg-[#0D0D0D] border border-[#262626] rounded-3xl p-8 md:p-14 max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-10 md:gap-16">
-
-    {/* Left Accent / Label */}
-    <div className="md:w-1/3">
-      <span className="inline-block mb-4 text-sm tracking-widest uppercase text-white/50">
-        Our Story
-      </span>
-      <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight">
-        Built to Help Brands <br /> Grow Online
-      </h2>
-    </div>
-
-    {/* Content */}
-    <div className="md:w-2/3 text-white/70 text-base md:text-lg leading-relaxed">
-      <p>
-        FavMedia began in 2025 with a simple mission — to help startups,
-        creators, and businesses build a powerful digital presence.
-      </p>
-
-      <p className="mt-4">
-        Our team of developers, marketers, and creatives work at the
-        intersection of <span className="text-white">design, technology, and content</span> to
-        create websites, social campaigns, and video experiences that don’t
-        just look good — they perform.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-      {/* Stats Section */}
-      <section id="stats" className="py-16 w-full bg-black">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid gap-6 md:grid-cols-2 text-center">
+      {/* STATS */}
+      <section id="stats" className="py-16 bg-black">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="grid gap-6 sm:grid-cols-2 text-center">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-[#0D0D0D] border border-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-xl hover:scale-[1.02] transition duration-300"
+                className="bg-[#0D0D0D] border border-[#2a2a2a] rounded-3xl p-6 md:p-8 hover:scale-[1.02] transition"
               >
                 <h3 className="text-xl md:text-2xl font-semibold mb-2">
                   {stat.title}
@@ -152,33 +161,51 @@ const About = () => {
         </div>
       </section>
 
-      {/* Founders Section */}
-      <section id="team" className="max-w-6xl mx-auto px-3 md:px-1 py-20">
+      {/* FOUNDERS */}
+      <section id="team" className="max-w-6xl mx-auto px-4 py-20">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-8">
           Meet Our Founders
         </h2>
+
         <p className="text-center text-gray-400 mb-16 max-w-3xl mx-auto text-sm md:text-base">
-          Behind FavMedia is a team of passionate builders, coders, and marketers
-          — led by founders committed to pushing creative boundaries.
+          Behind FavMedia is a team of passionate builders and marketers.
         </p>
 
-        <div className="grid gap-12 md:grid-cols-2">
+        <div className="grid gap-16 md:grid-cols-2">
           {founders.map((member, idx) => (
             <div
               key={idx}
-              className="relative bg-[#0D0D0D] rounded-2xl p-6 md:p-8 border border-[#222] shadow-lg"
+              className="relative bg-[#0D0D0D] rounded-2xl p-6 sm:p-8 border border-[#222]"
             >
-              <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-[140px] h-[140px] rounded-full overflow-hidden border-4 border-[#222]">
+              <div
+                className="
+                  absolute
+                  -top-14
+                  sm:-top-16
+                  left-1/2
+                  -translate-x-1/2
+                  w-[110px]
+                  h-[110px]
+                  sm:w-[140px]
+                  sm:h-[140px]
+                  rounded-full
+                  overflow-hidden
+                  border-4
+                  border-[#222]
+                "
+              >
                 <img
                   src={member.image}
-                  alt={`Portrait of ${member.name}`}
-                  className="object-cover w-full h-full"
+                  alt={member.name}
+                  className="w-full h-full object-cover"
                 />
               </div>
 
-              <div className="mt-20 text-center">
+              <div className="mt-16 sm:mt-20 text-center">
                 <h3 className="text-2xl font-semibold">{member.name}</h3>
-                <p className="text-sm text-white mt-1 mb-4">{member.role}</p>
+                <p className="text-sm text-white mt-1 mb-4">
+                  {member.role}
+                </p>
                 <p className="text-[#cccccc] text-sm leading-relaxed">
                   {member.bio}
                 </p>
@@ -188,32 +215,40 @@ const About = () => {
         </div>
       </section>
 
-      {/* Core Values */}
-      <section id="values" className="max-w-6xl mx-auto px-6 md:px-12 py-20 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-12">Our Core Values</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+      {/* CORE VALUES */}
+      <section
+        id="values"
+        className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 py-16 sm:py-20 text-center"
+      >
+        <h2 className="text-3xl md:text-5xl font-bold mb-12">
+          Our Core Values
+        </h2>
+
+        <div className="grid gap-8 md:grid-cols-3">
           {[
             {
               title: "Innovation",
-              desc: "We explore new technologies and creative approaches to deliver cutting-edge solutions.",
+              desc: "Exploring new technologies and creative approaches.",
             },
             {
               title: "Client Success",
-              desc: "Your success is our priority. We build strong partnerships and drive real growth.",
+              desc: "Building partnerships that drive real growth.",
             },
             {
               title: "Impactful Design",
-              desc: "We craft stunning, functional designs that leave a lasting impression.",
+              desc: "Designs that look stunning and perform.",
             },
           ].map((value, i) => (
             <div
               key={i}
-              className="bg-[#0D0D0D] p-8 rounded-2xl border border-[#333] shadow-lg"
+              className="bg-[#0D0D0D] p-8 rounded-2xl border border-[#333]"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-[#e0e0e0]">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4">
                 {value.title}
               </h3>
-              <p className="text-[#cccccc]">{value.desc}</p>
+              <p className="text-[#cccccc] text-sm sm:text-base">
+                {value.desc}
+              </p>
             </div>
           ))}
         </div>

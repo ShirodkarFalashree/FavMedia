@@ -4,19 +4,24 @@ import { GoDotFill } from "react-icons/go";
 
 const testimonials = [
   {
-    text: "Would recommend to anyone! Absolutely loved the speed and quality.",
-    name: "Neha",
+    text: "Great experience working with FAVmedia, the team was very helpful and guided us throughout the entire process of building our company's online presence",
+    name: "Neha Patwa",
     role: "Business Owner",
   },
   {
-    text: "Our brand's Insta feed has never looked better. Stellar design!",
-    name: "Manju",
-    role: "NGO Worker",
+    text: "As a non-technical person working with FAVmedia was the smoothest experience for our NGO. Great developers and support team. Highly recommended.",
+    name: "Manju Sujith",
+    role: "NGO Founder",
   },
   {
-    text: "The UI designs fit our dev stack perfectly. Great job!",
-    name: "GitHub User",
-    role: "Frontend Developer",
+    text: "Helped us in the most urgent situation and delivered an entire saas project in one night.",
+    name: "Amruta Pansare",
+    role: "Content Creator ",
+  },
+  {
+    text: "Great experience to work with the FAVmedia team. Really happy with the website worth every penny.",
+    name: "Krushna Pawar",
+    role: "Rawaura - Clothing Brand Founder",
   },
 ];
 
