@@ -39,10 +39,12 @@ const Testimonials = () => {
     <section className="w-full bg-black py-16 md:py-24">
       <div className="max-w-4xl mx-auto flex flex-col items-center justify-center px-6 text-center relative">
         {/* Section Tag */}
-        <div className="mb-10">
-          <div className="flex items-center gap-2 px-4 py-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm">
-            <GoDotFill className="animate-pulse text-white" />
-            Testimonials
+        <div className="flex justify-center mb-10">
+          <div className="p-[1px] rounded-full bg-gradient-to-r from-white/20 to-white/0">
+            <div className="flex items-center gap-2 px-4 py-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm">
+              <GoDotFill className="animate-pulse text-white" />
+              Testimonials
+            </div>
           </div>
         </div>
 

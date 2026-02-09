@@ -70,7 +70,11 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   const navigate = useNavigate();
-
+  const scrollToServices = () => {
+    const section = document.getElementById("services");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+  
   return (
     <section
       className="bg-black text-white md:min-h-[300px] flex flex-col justify-center items-center py-10 md:py-0 px-4 sm:px-6 lg:px-8 md:pt-[150px] md:mb-10"
@@ -123,7 +127,7 @@ const Hero = () => {
         <div className="p-[2px] rounded-xl bg-gradient-to-r from-gray-200 via-black to-gray-200 w-full sm:w-auto">
           <button
             className="px-4 cursor-pointer py-3 sm:px-6 sm:py-3 bg-black text-white rounded-xl w-full hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 text-sm sm:text-base"
-            onClick={() => navigate("/templates")}
+            onClick={scrollToServices}
           >
             View Our Work
           </button>
